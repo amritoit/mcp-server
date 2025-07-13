@@ -5,3 +5,5 @@ langgraph
 langchain
 langchain-openai
 langchain-mcp-adapters
+langchain[openai]
+logging

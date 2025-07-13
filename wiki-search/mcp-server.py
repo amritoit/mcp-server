@@ -3,12 +3,25 @@ from mcp.server.fastmcp import FastMCP
 
 mcp = FastMCP("WikipediaSearch")
 
+import argparse
+from logger import setup_logger  # We'll define this next
+
+parser = argparse.ArgumentParser()
+parser.add_argument("--log", type=str, default="logs/server.log")
+args = parser.parse_args()
+
+logger = setup_logger("mcp-server", args.log)
+#logger.debug("Server started")
+
+
 @mcp.tool()
 def fetch_wikipedia_info(query: str) -> dict:
     """
     Search Wikipedia for a topic and return title, summary, and URL of the best match.
     """
     try:
+        logger.info('Fetching wikipedia for search:{query}')
+        
         search_results = wikipedia.search(query)
         if not search_results:
             return {"error": "No results found for your query."}
@@ -39,6 +52,7 @@ def list_wikipedia_sections(topic: str) -> dict:
     Return a list of section titles from the Wikipedia page of a given topic.
     """
     try:
+        logger.info('Listing wikipedia sections for topic:{topic}')       
         page = wikipedia.page(topic)
         sections = page.sections
         return {"sections": sections}
@@ -52,6 +66,7 @@ def get_section_content(topic: str, section_title: str) -> dict:
     Return the content of a specific section in a Wikipedia article.
     """
     try:
+        logger.info('Fetching section content for:{topic}, {section_title}')       
         page = wikipedia.page(topic)
         content = page.section(section_title)
         if content:
