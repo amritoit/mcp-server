@@ -1,5 +1,7 @@
 import wikipedia
 from mcp.server.fastmcp import FastMCP
+from pathlib import Path
+
 
 mcp = FastMCP("WikipediaSearch")
 
@@ -13,6 +15,20 @@ args = parser.parse_args()
 logger = setup_logger("mcp-server", args.log)
 #logger.debug("Server started")
 
+
+@mcp.resource("file://suggested_titles")
+def suggested_titles() -> list[str]:
+    """
+    Read and return suggested Wikipedia topics from a local file.
+    """
+    try:
+        path = Path("suggested_titles.txt")
+        if not path.exists():
+            return ["File not found"]
+        return path.read_text(encoding="utf-8").strip().splitlines()
+    except Exception as e:
+        return [f"Error reading file: {str(e)}"]
+    
 
 @mcp.prompt()
 def highlight_sections_prompt(topic: str) -> str:
