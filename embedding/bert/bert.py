@@ -93,6 +93,18 @@ class Bert:
         return word_embeddings.numpy()
 
 
+    # Function for semantic search
+    def semantic_search(self, query, top_n=3):
+        query_embedding = self.generate_embedding(query)
+        similarities = []
+        for idx, row in df.iterrows():
+            desc_embedding = self.generate_embedding(row['processed_description'])
+            similarity = cosine_similarity(query_embedding, desc_embedding)[0][0]
+            similarities.append((row['Job Title'], similarity, row['Job Description']))
+        similarities.sort(key=lambda x: x[1], reverse=True)
+        return similarities[:top_n]
+
+
     def run_example(self):
         """
         Main function to demonstrate the use of the Bert class.
