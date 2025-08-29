@@ -3,3 +3,5 @@ pandas==2.3.2
 openai
 langchain
 langchain-openai
+langchain-community
+chromadb
