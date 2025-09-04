@@ -3,7 +3,7 @@ from langchain_community.vectorstores import Chroma
 import os
 import numpy as np
 import langchain
-
+from langchain_core.prompts import PromptTemplate
 
 my_azure_api_key = "<<YOUR_AZURE_API_KEY>>"
 os.environ["OPENAI_API_KEY"] = my_azure_api_key
@@ -29,12 +29,33 @@ class LangChainRag:
         # Create a ChromaDB instance
         db = Chroma.from_texts(documents, self.embedding_model)
 
+        # Define the prompt template for generating answers
+        self.define_prompt_template()
+
         # Configure the database to act as a retriever, setting the search type to
         # similarity and returning the top 1 result
         self.retriever = db.as_retriever(
             search_type="similarity",
             search_kwargs={'k': 1}
         )
+
+
+    def define_prompt_template(self):
+        # Define a template for generating answers using provided context
+        template = """Use the following pieces of context to answer the question at the end.
+        If you don't know the answer, just say that you don't know, don't try to make up an answer.
+        Use three sentences maximum and keep the answer as concise as possible.
+        Always say 'thanks for asking!' at the end of the answer.
+
+        {context}
+        Question: {question}
+
+        Helpful Answer:"""
+
+        # Create a custom prompt template using the defined template, 
+        # part of auhgmented generation (RAG) approach
+        self.custom_rag_prompt = PromptTemplate.from_template(template)
+        print(self.custom_rag_prompt) # Print the custom prompt template
 
 
     def get_azure_openai_query_embedding(self, text):        
@@ -47,12 +68,15 @@ class LangChainRag:
 
     def main(self):       
         # Example Query
-        query = "Who will give you the ticket to enjoy the night ?"
+        query ="Who will give you the ticket to enjoy the night ?"
         print("Query:", query)
-        
+
         # Perform a similarity search with the given query
-        result = self.retriever.invoke(query)
-        print(result)
+        context = self.retriever.invoke(query)
+        print("result:", context)
+        
+        augmented_query = self.custom_rag_prompt.format(context=context, question=query)
+        print("Augmented Query:", augmented_query)
         #result = self.get_azure_openai_query_embedding(query)
         #print(result)
 
