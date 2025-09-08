@@ -1,8 +1,27 @@
+from langchain_openai import AzureChatOpenAI
 from crewai import Agent
 from crewai import Task
 from crewai_tools import SerperDevTool
 from crewai import Crew
+from crewai import LLM
+import warnings
+import os
 
+warnings.filterwarnings('ignore')
+os.environ['PIP_ROOT_USER_ACTION'] = 'ignore'
+
+os.environ["SERPER_API_KEY"] = '<<YOUR_SERPER_API_KEY_HERE,get from https://serper.dev/>>'
+my_azure_api_key = "<<YOUR_AZURE_API_KEY_HERE>>"
+os.environ["OPENAI_API_KEY"] = my_azure_api_key
+os.environ["AZURE_OPENAI_KEY"] = my_azure_api_key
+os.environ["OPENAI_API_TYPE"] = "azure"
+os.environ["AZURE_OPENAI_ENDPOINT"] = "https://ammondal-llm-test.openai.azure.com/"
+os.environ["AZURE_OPENAI_API_VERSION"] = "2023-05-15"
+
+# Required
+AZURE_API_KEY=my_azure_api_key
+AZURE_API_BASE= "https://ammondal-llm-test.openai.azure.com/"
+AZURE_API_VERSION="2025-04-01-preview"
 
 class MyCrewAgent:
 
@@ -10,6 +29,15 @@ class MyCrewAgent:
         print(f"Initializing CrewAI agents...")
         # Create a search tool
         self.search_tool = SerperDevTool()
+
+        # Create the LLM instance
+        self.llm = LLM(
+            model="azure/gpt-4.1",
+            api_version="2023-05-15",
+            api_base=AZURE_API_BASE,
+            api_key=AZURE_API_KEY
+        )
+        
         venue_finder, find_venue_task = self.prepare_venue_finder_agents()
         venue_quality_assurance_agent, quality_assurance_review_task = self.prepare_quality_assurance_agent()
         self.event_planning_crew = Crew(
@@ -33,7 +61,8 @@ class MyCrewAgent:
                 "Your goal is to provide the client with the best possible venue options."
             ),
             tools=[self.search_tool],
-            verbose=True
+            verbose=True,
+            llm=self.llm
         )
 
         print(f"Initializing Task for Agent: {venue_finder.role}") 
@@ -48,7 +77,7 @@ class MyCrewAgent:
                 "A list of 5 potential venues with detailed information on capacity, location, amenities, pricing, and availability."
             ),
             tools=[self.search_tool],
-            agent=venue_finder,
+            agent=venue_finder
         )
 
         return venue_finder, find_venue_task
@@ -67,7 +96,8 @@ class MyCrewAgent:
                 "Your job is to review the venue options and provide detailed feedback."
             ),
             tools=[self.search_tool],
-            verbose=True
+            verbose=True,
+            llm=self.llm
         )
 
         print(f"Initializing Task for Agent: {venue_quality_assurance_agent.role}") 
@@ -81,7 +111,7 @@ class MyCrewAgent:
                 "A detailed review of the 5 potential venues, highlighting any issues, strengths, and overall suitability."
             ),
             tools=[self.search_tool],
-            agent=venue_quality_assurance_agent,
+            agent=venue_quality_assurance_agent
         )
 
         return venue_quality_assurance_agent, quality_assurance_review_task
@@ -94,7 +124,12 @@ class MyCrewAgent:
             "requirements": "Capacity for 5000, central location, modern amenities, budget up to $50,000"
         }
 
-        result = self.event_planning_crew.kickoff(inputs=inputs)
+        try:
+            result = self.event_planning_crew.kickoff(inputs=inputs)
+            print("Crew kickoff result:\n", result)
+        except Exception as e:
+            print(f"CrewAI kickoff failed: {e}")
+            result = None
 
         print(f"CrewAI agents run completed.")
 

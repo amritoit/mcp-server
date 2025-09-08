@@ -1,0 +1,1547 @@
+(.venv) ammondal@AMMONDAL-LAPTOP[Sep-08 04:21:32][multi-agent-example][main]$ .\.venv\Scripts\python.exe .\crewai_sample_agent.py
+Initializing CrewAI agents...
+Initializing agent venufinder...
+Initializing Task for Agent: Conference Venue Finder
+Initializing agent quality assurance...
+Initializing Task for Agent: Venue Quality Assurance Specialist
+CrewAI agents initialized.
+Running CrewAI agents...
+╭───────────────────────────────────────────── Crew Execution Started ─────────────────────────────────────────────╮
+│                                                                                                                  │
+│  Crew Execution Started                                                                                          │
+│  Name: crew                                                                                                      │
+│  ID: 09966e3f-ae0b-4f39-a950-2e9f869ed03e                                                                        │
+│  Tool Args:                                                                                                      │
+│                                                                                                                  │
+│                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+🚀 Crew: crew
+├── 📋 Task: c52a70de-2f13-4d57-8f17-caf9e50eeb4f
+│   Status: Executing Task...
+└── 🧠 Memory Retrieval Started2025-09-08 16:21:45,236 - 22568 - rag_storage.py-rag_storage:125 - ERROR: Error durin🚀 Crew: crew
+├── 📋 Task: c52a70de-2f13-4d57-8f17-caf9e50eeb4f
+│   Status: Executing Task...
+└── ✅ Memory Retrieval Completed
+    └── Sources Used
+        ├── ✅ Long Term Memory (6.26ms)
+        ├── ✅ Short Term Memory (133.57ms)
+        └── ✅ Entity Memory (100.86ms)
+╭──────────────────────────────────────────────── 🤖 Agent Started ────────────────────────────────────────────────╮
+│                                                                                                                  │
+│  Agent: Conference Venue Finder                                                                                  │
+│                                                                                                                  │
+│  Task: Conduct a thorough search to find the best venue for the upcoming conference. Consider factors such as    │
+│  capacity, location, amenities, and pricing. Use online resources and databases to gather comprehensive          │
+│  information.                                                                                                    │
+│                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+🚀 Crew: crew
+├── 📋 Task: c52a70de-2f13-4d57-8f17-caf9e50eeb4f
+│   Status: Executing Task...
+│   └── 🔧 Used Search the internet with Serper (1)
+└── ✅ Memory Retrieval Completed
+    └── Sources Used
+        ├── ✅ Long Term Memory (6.26ms)
+        ├── ✅ Short Term Memory (133.57ms)
+        └── ✅ Entity Memory (100.86ms)
+╭──────────────────────────────────────────── 🔧 Agent Tool Execution ─────────────────────────────────────────────╮
+│                                                                                                                  │
+│  Agent: Conference Venue Finder                                                                                  │
+│                                                                                                                  │
+│  Thought: Thought: To find the best venues, I need to conduct a search focusing on top conference venues,        │
+│  specifying requirements like capacity, location, amenities, pricing, and availability.                          │
+│                                                                                                                  │
+│  Using Tool: Search the internet with Serper                                                                     │
+│                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────── Tool Input ───────────────────────────────────────────────────╮
+│                                                                                                                  │
+│  "{\"search_query\": \"best conference venues with capacity, amenities, pricing, and availability\"}"            │
+│                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭────────────────────────────────────────────────── Tool Output ───────────────────────────────────────────────────╮
+│                                                                                                                  │
+│  {'searchParameters': {'q': 'best conference venues with capacity, amenities, pricing, and availability',        │
+│  'type': 'search', 'num': 10, 'engine': 'google'}, 'organic': [{'title': 'Meeting Venues in Macon, MO - 180      │
+│  Venues | Pricing - Eventective', 'link': 'https://www.eventective.com/macon-mo/meeting-venues/', 'snippet':     │
+│  'Find and contact local Meeting Venues in Macon, MO with pricing and availability for your meeting event.       │
+│  Great for meeting planning!', 'position': 1}, {'title': 'Conference Rooms Birmingham AL: 10 Best Power Venues   │
+│  2025', 'link': 'https://microflexspace.com/conference-rooms-birmingham-al/', 'snippet': 'The conference rooms   │
+│  range from intimate 8-person strategy sessions to impressive 50-person presentations, with hourly rates         │
+│  between $25-39 ...', 'position': 2}, {'title': 'Meeting Spaces & Venues - Experience Ruston, Louisiana',        │
+│  'link': 'https://www.rustonlincoln.com/meetings/meeting-spaces-venues/', 'snippet': 'Comfort Inn and Suites     │
+│  offers a meeting room with a 50-person capacity offering amenities such as wifi, office supplies and more.',    │
+│  'position': 3}, {'title': 'The 16 Best Conference Venues for Rent in Austin, TX - Tagvenue', 'link':            │
+│  'https://www.tagvenue.com/us/hire/conference-venues/austin', 'snippet': 'Our Conference Room comes equipped     │
+│  with a SmartBoard, a 42" flat-screen monitor, and buffet space for snacks or displays. It can accommodate up    │
+│  to 20 people and ...', 'position': 4}, {'title': 'EventUp: Event, Party, Meeting & Wedding Venue Directory',    │
+│  'link': 'https://marketing.eventup.com/', 'snippet': "Browse venues and see details about your favorite event   │
+│  spaces-including availability, amenities, pricing, reviews, and more. We'll help you find any type of ...",     │
+│  'position': 5}, {'title': 'Top Conference Rooms San Diego: Find the Perfect Meeting Space', 'link':             │
+│  'https://www.offsite.com/blog/conference-rooms-san-diego', 'snippet': 'Book conference rooms well in advance    │
+│  to secure availability, and consider factors like cost, amenities, and ...                                      │
+│                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+🚀 Crew: crew
+├── 📋 Task: c52a70de-2f13-4d57-8f17-caf9e50eeb4f
+│   Status: Executing Task...
+│   ├── 🔧 Used Search the internet with Serper (1)
+│   └── 🔧 Used Search the internet with Serper (2)
+└── ✅ Memory Retrieval Completed
+    └── Sources Used
+        ├── ✅ Long Term Memory (6.26ms)
+        ├── ✅ Short Term Memory (133.57ms)
+        └── ✅ Entity Memory (100.86ms)
+╭──────────────────────────────────────────── 🔧 Agent Tool Execution ─────────────────────────────────────────────╮
+│                                                                                                                  │
+│  Agent: Conference Venue Finder                                                                                  │
+│                                                                                                                  │
+│  Thought: Thought: I see results for specific locations (Austin, Denver, Pittsburgh, Seattle, Birmingham,        │
+│  Ruston) and websites with directories of venues (Eventective, EventUp, Tagvenue). To find comprehensive         │
+│  details including capacity, location, amenities, pricing, and availability, I should focus on a venue           │
+│  directory with advanced filters for these criteria, and select highly rated venues from major cities. I’ll use  │
+│  EventUp, which promises details on all required criteria.                                                       │
+│                                                                                                                  │
+│  Using Tool: Search the internet with Serper                                                                     │
+│                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────── Tool Input ───────────────────────────────────────────────────╮
+│                                                                                                                  │
+│  "{\"search_query\": \"EventUp best conference venues capacity amenities pricing availability\"}"                │
+│                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭────────────────────────────────────────────────── Tool Output ───────────────────────────────────────────────────╮
+│                                                                                                                  │
+│  {'searchParameters': {'q': 'EventUp best conference venues capacity amenities pricing availability', 'type':    │
+│  'search', 'num': 10, 'engine': 'google'}, 'organic': [{'title': 'Venues & Event Spaces for Rent in Chicago -    │
+│  EventUp', 'link': 'https://eventup.com/venues/chicago-il/', 'snippet': "On average, prices can range from $500  │
+│  to $10,000 or more. It's best to contact the venue directly for specific pricing and availability. What types   │
+│  of event ...", 'position': 1}, {'title': 'EventUp: Event, Party, Meeting & Wedding Venue Directory', 'link':    │
+│  'https://marketing.eventup.com/', 'snippet': "Browse venues and see details about your favorite event           │
+│  spaces-including availability, amenities, pricing, reviews, and more. We'll help you find any type of ...",     │
+│  'position': 2}, {'title': '150 N Riverside | Corporate Events, Wedding Locations ... - EventUp', 'link':        │
+│  'https://eventup.com/venue/150-n-riverside-3/', 'snippet': 'Best-in-class amenities include a 8,573             │
+│  square-foot fitness center, conference facilities including a 260-seat ballroom/meeting space and two           │
+│  boardrooms, an ...', 'position': 3}, {'title': 'The 16 Best Conference Venues for Rent in Chicago, IL -         │
+│  Tagvenue', 'link': 'https://www.tagvenue.com/us/hire/conference-venues/chicago', 'snippet': 'Meeting room for   │
+│  up to 10 guests with amenities such as a whiteboard, TV screen, and more. Our facility also includes a fitness  │
+│  center, a perfect place to sneak ...', 'position': 4}, {'title': 'Discovering Hidden Gems: Unique &             │
+│  Non-Traditional Venues on ...', 'link':                                                                         │
+│  'https://eventupblog.tripleseat.com/unique-non-traditional-venues-on-eventup', 'snippet': 'The venue listings   │
+│  provide detailed information about availability, amenities, and pricing, helping you understand what makes      │
+│  each space ...', 'position': 5}, {'title': 'Top 12 venue finding services to elevate your next corporate        │
+│  event.', 'link':                                                                                                │
+│  'https://gogather.com/blog/top-venue-sourcing-platforms-to-elevate-your-next-corporate-event', 'snippet':       │
+│  "Their smart search fi...                                                                                       │
+│                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+🚀 Crew: crew
+├── 📋 Task: c52a70de-2f13-4d57-8f17-caf9e50eeb4f
+│   Status: Executing Task...
+│   ├── 🔧 Used Search the internet with Serper (1)
+│   ├── 🔧 Used Search the internet with Serper (2)
+│   └── 🔧 Used Search the internet with Serper (3)
+└── ✅ Memory Retrieval Completed
+    └── Sources Used
+        ├── ✅ Long Term Memory (6.26ms)
+        ├── ✅ Short Term Memory (133.57ms)
+        └── ✅ Entity Memory (100.86ms)
+╭──────────────────────────────────────────── 🔧 Agent Tool Execution ─────────────────────────────────────────────╮
+│                                                                                                                  │
+│  Agent: Conference Venue Finder                                                                                  │
+│                                                                                                                  │
+│  Thought: Thought: EventUp offers detailed venue listings with filtering for capacity, amenities, pricing, and   │
+│  availability. Some direct examples (e.g. 150 N Riverside) were surfaced. I should search directly for top       │
+│  conference venues on EventUp in a major city like Chicago, where examples are plentiful and listings include    │
+│  all required info. I will look for “best conference venues Chicago EventUp” to gather venue-specific details    │
+│  for five options.                                                                                               │
+│                                                                                                                  │
+│  Using Tool: Search the internet with Serper                                                                     │
+│                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────── Tool Input ───────────────────────────────────────────────────╮
+│                                                                                                                  │
+│  "{\"search_query\": \"best conference venues Chicago EventUp capacity amenities pricing availability\"}"        │
+│                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭────────────────────────────────────────────────── Tool Output ───────────────────────────────────────────────────╮
+│                                                                                                                  │
+│  {'searchParameters': {'q': 'best conference venues Chicago EventUp capacity amenities pricing availability',    │
+│  'type': 'search', 'num': 10, 'engine': 'google'}, 'organic': [{'title': 'The 16 Best Conference Venues for      │
+│  Rent in Chicago, IL', 'link': 'https://www.tagvenue.com/us/hire/conference-venues/chicago', 'snippet': 'Top     │
+│  Conference Venues in Chicago, IL ; The Studio & Small Conf. Room. 150 · IDEA Studio Event Space ; South         │
+│  Ballroom. 40 · The Ivy Hotel ; Truss Meeting Room. 100 ...', 'position': 1}, {'title': 'Top 20 Conference &     │
+│  Summit Venues in Chicago, IL', 'link':                                                                          │
+│  'https://www.partyslate.com/find-venues/conference-summit-venues/near/chicago-il-usa', 'snippet': 'The          │
+│  Geraghty. 2520 S Hoyne Ave, Chicago, IL 60608, USA · Spaces for 30-1,500 Guests ; Taste 222. 222 N Canal St,    │
+│  Chicago, IL 60606, USA · Spaces for 16-250 Guests.', 'position': 2}, {'title': 'Venues & Event Spaces for Rent  │
+│  in Chicago', 'link': 'https://eventup.com/venues/chicago-il/', 'snippet': "On average, prices can range from    │
+│  $500 to $10,000 or more. It's best to contact the venue directly for specific pricing and availability. What    │
+│  types of event ...", 'position': 3}, {'title': 'Meeting Venues in Chicago, IL', 'link':                         │
+│  'https://www.eventective.com/chicago-il/meeting-venues/', 'snippet': 'Find and contact local Meeting Venues in  │
+│  Chicago, IL with pricing and availability for your meeting event. Great for meeting planning!', 'position':     │
+│  4}, {'title': 'Top Event Venues in Chicago, IL, USA', 'link':                                                   │
+│  'https://www.cvent.com/venues/results/Chicago-Northwest--Illinois--USA', 'snippet': 'How to Choose an Event     │
+│  Venue in Chicago. When selecting a venue for your event in Chicago, consider factors such as location,          │
+│  capacity, amenities, and budget.', 'position': 5}, {'title': '36 Best Seminar Venues for Rent in Chicago, IL',  │
+│  'link': 'https://www.peerspace.com/venues/chicago--il/seminar-venue', 'snippet': "Seminar venues in Chicago     │
+│  average $67 per hour to rent, but it's easy to spend less or more depending on wha...                           │
+│                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+🚀 Crew: crew
+├── 📋 Task: c52a70de-2f13-4d57-8f17-caf9e50eeb4f
+│   Status: Executing Task...
+│   ├── 🔧 Used Search the internet with Serper (1)
+│   ├── 🔧 Used Search the internet with Serper (2)
+│   ├── 🔧 Used Search the internet with Serper (3)
+│   └── 🔧 Used Search the internet with Serper (4)
+└── ✅ Memory Retrieval Completed
+    └── Sources Used
+        ├── ✅ Long Term Memory (6.26ms)
+        ├── ✅ Short Term Memory (133.57ms)
+        └── ✅ Entity Memory (100.86ms)
+╭──────────────────────────────────────────── 🔧 Agent Tool Execution ─────────────────────────────────────────────╮
+│                                                                                                                  │
+│  Agent: Conference Venue Finder                                                                                  │
+│                                                                                                                  │
+│  Thought: Thought: Several links point to specific venues and directories with capacity and pricing (e.g.,       │
+│  Palmer House Hilton, The Drake Hotel, The Geraghty, Taste 222, The Gwen). To fulfill the criteria of detailed   │
+│  info on 5 venues, I should search for details of each venue directly and compile capacity, location,            │
+│  amenities, pricing, and availability.                                                                           │
+│                                                                                                                  │
+│  Using Tool: Search the internet with Serper                                                                     │
+│                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────── Tool Input ───────────────────────────────────────────────────╮
+│                                                                                                                  │
+│  "{\"search_query\": \"Palmer House Hilton Chicago conference venue details capacity amenities pricing           │
+│  availability\"}"                                                                                                │
+│                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭────────────────────────────────────────────────── Tool Output ───────────────────────────────────────────────────╮
+│                                                                                                                  │
+│  {'searchParameters': {'q': 'Palmer House Hilton Chicago conference venue details capacity amenities pricing     │
+│  availability', 'type': 'search', 'num': 10, 'engine': 'google'}, 'organic': [{'title': 'Event and Meeting       │
+│  Spaces | Palmer House, a Hilton Hotel', 'link': 'https://www.palmerhousehiltonhotel.com/meetings-events/',      │
+│  'snippet': 'Palmer House, a Hilton Hotel offers over 130000 sq. ft. of event spaces, including historic         │
+│  ballrooms accommodating up to 1600+ people.', 'position': 1}, {'title': 'Palmer House, a Hilton Hotel |         │
+│  Meetings', 'link': 'https://www.hilton.com/en/hotels/chiphhh-palmer-house/events/meetings/', 'snippet':         │
+│  'Choose Your Venue · Over 130,000 sq. ft. of meeting space · Three ballrooms accommodating up to 1,653 people   │
+│  · 78 breakout rooms · 16,909 sq. ft. exhibit hall · 11 ...', 'position': 2}, {'title': 'Chicago Meeting         │
+│  Facilities - Palmer House a Hilton Hotel', 'link':                                                              │
+│  'https://www.palmerhousehiltonhotel.com/meetings-events/facilities/', 'snippet': '9,733-square-foot Grand       │
+│  Ballroom and an adjoining 3,550-square-foot State Ballroom that combine to accommodate up to 1,690 guests ·     │
+│  22,800 square feet of exhibit ...', 'position': 3}, {'title': 'Palmer House, a Hilton Hotel', 'link':           │
+│  'https://www.hilton.com/en/hotels/chiphhh-palmer-house/', 'snippet': 'Meetings. We offer over 130,000 sq. ft.   │
+│  of meeting space, including three ballrooms and 78 breakout rooms. Allow our experienced team to guide you      │
+│  through the ...', 'position': 4, 'sitelinks': [{'title': 'Amenities', 'link':                                   │
+│  'https://www.hilton.com/en/hotels/chiphhh-palmer-house/amenities/'}, {'title': 'Dining Overview', 'link':       │
+│  'https://www.hilton.com/en/hotels/chiphhh-palmer-house/dining/'}, {'title': 'Rooms & Suites', 'link':           │
+│  'https://www.hilton.com/en/hotels/chiphhh-palmer-house/rooms/'}, {'title': 'Lockwood Express', 'link':          │
+│  'https://www.hilton.com/en/hotels/chiphhh-palmer-house/dining/lockwood-express/'}]}, {'title': 'Palmer House a  │
+│  Hilton Hotel - Booking Deals + 2025 Promos', 'link': 'https://www....                                           │
+│                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+🚀 Crew: crew
+├── 📋 Task: c52a70de-2f13-4d57-8f17-caf9e50eeb4f
+│   Status: Executing Task...
+│   ├── 🔧 Used Search the internet with Serper (1)
+│   ├── 🔧 Used Search the internet with Serper (2)
+│   ├── 🔧 Used Search the internet with Serper (3)
+│   ├── 🔧 Used Search the internet with Serper (4)
+│   └── 🔧 Used Search the internet with Serper (5)
+└── ✅ Memory Retrieval Completed
+    └── Sources Used
+        ├── ✅ Long Term Memory (6.26ms)
+        ├── ✅ Short Term Memory (133.57ms)
+        └── ✅ Entity Memory (100.86ms)
+╭──────────────────────────────────────────── 🔧 Agent Tool Execution ─────────────────────────────────────────────╮
+│                                                                                                                  │
+│  Agent: Conference Venue Finder                                                                                  │
+│                                                                                                                  │
+│  Thought: Thought: I now have comprehensive details for Palmer House Hilton Chicago (location, capacity,         │
+│  amenities, and some pricing info). I need to repeat this process for four other top venues (e.g. The Drake      │
+│  Hotel, The Geraghty, The Gwen, Taste 222) for the final list.                                                   │
+│                                                                                                                  │
+│  Using Tool: Search the internet with Serper                                                                     │
+│                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────── Tool Input ───────────────────────────────────────────────────╮
+│                                                                                                                  │
+│  "{\"search_query\": \"The Drake Hotel Chicago conference venue details capacity amenities pricing               │
+│  availability\"}"                                                                                                │
+│                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭────────────────────────────────────────────────── Tool Output ───────────────────────────────────────────────────╮
+│                                                                                                                  │
+│  {'searchParameters': {'q': 'The Drake Hotel Chicago conference venue details capacity amenities pricing         │
+│  availability', 'type': 'search', 'num': 10, 'engine': 'google'}, 'organic': [{'title': 'The Drake Hotel:        │
+│  Home', 'link': 'https://www.thedrakehotel.com/', 'snippet': 'The Drake 140 East Walton Place Chicago, IL 60611  │
+│  Phone 312.787.2200 Fax 312.787.1431 Toll-free Reservations 800.553.7253', 'position': 1}, {'title': 'Events &   │
+│  Spaces', 'link': 'https://www.thedrakehotel.com/meetings/events-and-spaces/', 'snippet': "Located on Chicago's  │
+│  Magnificent Mile, The Drake Hotel is the premier midwest meetings destination and has more than 30000 square    │
+│  feet of flexible meeting ...", 'position': 2}, {'title': 'THE DRAKE - Updated 2025 Prices & Hotel Reviews       │
+│  ...', 'link':                                                                                                   │
+│  'https://www.tripadvisor.com/Hotel_Review-g35805-d87645-Reviews-The_Drake-Chicago_Illinois.html', 'snippet':    │
+│  'The Drake, a Hilton Hotel is a historic downtown Chicago hotel in the Gold Coast, and has been a symbol of     │
+│  elegance and style since its opening in 1920.', 'position': 3}, {'title': 'The Drake Hotel, Chicago (IL) |      │
+│  2025 Updated Prices, Deals', 'link': 'https://www.agoda.com/en-ca/the-drake-hotel/hotel/chicago-il-us.html',    │
+│  'snippet': 'Meeting room / ballrooms, The Drake Hotel in Chicago (IL). 1k Lkvw Mob/Hear ... Please check the    │
+│  individual room capacity for more details. When booking ...', 'position': 4}, {'title': 'The Drake, a Hilton    │
+│  Hotel + Updated Prices', 'link':                                                                                │
+│  'https://www.theknot.com/marketplace/the-drake-a-hilton-hotel-chicago-il-1085264', 'snippet': 'Amenities +      │
+│  details. Amenities. Ceremony Area. Dressing Room. Handicap Accessible. Indoor Event Space. On-Site              │
+│  Accommodations. Reception Area. Wireless Internet.', 'position': 5}, {'title': 'The Drake Chicago Wedding       │
+│  Venues & Meeting Rooms ...', 'link': 'https://www.hilton.com/en/hotels/chidhhh-the-drake/events/', 'snippet':   │
+│  'Our historic venues include boardrooms overlooking Lake Michigan or the Chicago skyline. We have ballrooms     │
+│  with floor-to...                                                                                                │
+│                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+🚀 Crew: crew
+├── 📋 Task: c52a70de-2f13-4d57-8f17-caf9e50eeb4f
+│   Status: Executing Task...
+│   ├── 🔧 Used Search the internet with Serper (1)
+│   ├── 🔧 Used Search the internet with Serper (2)
+│   ├── 🔧 Used Search the internet with Serper (3)
+│   ├── 🔧 Used Search the internet with Serper (4)
+│   ├── 🔧 Used Search the internet with Serper (5)
+│   └── 🔧 Used Search the internet with Serper (6)
+└── ✅ Memory Retrieval Completed
+    └── Sources Used
+        ├── ✅ Long Term Memory (6.26ms)
+        ├── ✅ Short Term Memory (133.57ms)
+        └── ✅ Entity Memory (100.86ms)
+╭──────────────────────────────────────────── 🔧 Agent Tool Execution ─────────────────────────────────────────────╮
+│                                                                                                                  │
+│  Agent: Conference Venue Finder                                                                                  │
+│                                                                                                                  │
+│  Thought: Thought: I now have detailed information about The Drake Hotel Chicago. Next, I'll move on to The      │
+│  Geraghty to gather comprehensive details for the list.                                                          │
+│                                                                                                                  │
+│  Using Tool: Search the internet with Serper                                                                     │
+│                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────── Tool Input ───────────────────────────────────────────────────╮
+│                                                                                                                  │
+│  "{\"search_query\": \"The Geraghty Chicago conference venue details capacity amenities pricing                  │
+│  availability\"}"                                                                                                │
+│                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭────────────────────────────────────────────────── Tool Output ───────────────────────────────────────────────────╮
+│                                                                                                                  │
+│  {'searchParameters': {'q': 'The Geraghty Chicago conference venue details capacity amenities pricing            │
+│  availability', 'type': 'search', 'num': 10, 'engine': 'google'}, 'organic': [{'title': 'Venue of Possibilities  │
+│  - Sophisticated Event Space in Chicago', 'link': 'https://thegeraghty.com/', 'snippet': 'The Geraghty is a      │
+│  luxury-appointed event space, completely customizable with full in-house services available. A Venue of         │
+│  Possibilities.', 'position': 1}, {'title': 'The Geraghty | Chicago Venue | 869 photos', 'link':                 │
+│  'https://www.partyslate.com/venues/the-geraghty', 'snippet': 'Featured photo from VIP Green Room. VIP Green     │
+│  Room. 30; Seated. 50; Standing. Event Space. Pricing Packages. The Geraghty Pricing. Est. Cost Per Guest:       │
+│  $419.', 'position': 2}, {'title': 'Best Venue Features & Amenities Found at The Geraghty', 'link':              │
+│  'https://thegeraghty.com/features-amenities/', 'snippet': 'The Geraghty offers 25,000 square feet of versatile  │
+│  event space in Chicago, perfect for corporate events, weddings, galas, and social gatherings.', 'position':     │
+│  3}, {'title': 'The Geraghty | Venue - Chicago, IL', 'link':                                                     │
+│  'https://www.wedding-spot.com/venue/11742/the-geraghty/', 'snippet': 'Guest capacity: Accommodates up to 800    │
+│  guests ; Services: Ceremony / Reception. Indoor. VIEW OPTIONS ; Location: 2520 South Hoyne Avenue Chicago, IL   │
+│  60608 ...', 'position': 4}, {'title': 'The Geraghty', 'link':                                                   │
+│  'https://www.choosechicago.com/listing/the-geraghty/', 'snippet': 'jjasin@thegeraghty.com. Capacity: 1,000      │
+│  Guests Size: 25,000 Sq. Ft. Open Space Ceiling Height: 22 Ft. Parking: Secure, Monitored, Spacious ...',        │
+│  'position': 5}, {'title': 'The Geraghty | Wedding Venues | Cost, Reviews & Photos', 'link':                     │
+│  'https://www.zola.com/wedding-vendors/wedding-venues/the-geraghty', 'snippet': 'Explore The Geraghty through    │
+│  big, beautiful photos of their work. Get details ... The Geraghty. 2520 S Hoyne Ave, Chicago, IL based Venue.   │
+│  Unclaimed. No ...', 'position': 6}, {'title': 'The Geraghty - Chicago Event Venues...                           │
+│                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+🚀 Crew: crew
+├── 📋 Task: c52a70de-2f13-4d57-8f17-caf9e50eeb4f
+│   Status: Executing Task...
+│   ├── 🔧 Used Search the internet with Serper (1)
+│   ├── 🔧 Used Search the internet with Serper (2)
+│   ├── 🔧 Used Search the internet with Serper (3)
+│   ├── 🔧 Used Search the internet with Serper (4)
+│   ├── 🔧 Used Search the internet with Serper (5)
+│   ├── 🔧 Used Search the internet with Serper (6)
+│   └── 🔧 Used Search the internet with Serper (7)
+└── ✅ Memory Retrieval Completed
+    └── Sources Used
+        ├── ✅ Long Term Memory (6.26ms)
+        ├── ✅ Short Term Memory (133.57ms)
+        └── ✅ Entity Memory (100.86ms)
+╭──────────────────────────────────────────── 🔧 Agent Tool Execution ─────────────────────────────────────────────╮
+│                                                                                                                  │
+│  Agent: Conference Venue Finder                                                                                  │
+│                                                                                                                  │
+│  Thought: Thought: I now have details for The Geraghty. Next, I need to gather similar information for The Gwen  │
+│  Chicago and Taste 222.                                                                                          │
+│                                                                                                                  │
+│  Using Tool: Search the internet with Serper                                                                     │
+│                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────── Tool Input ───────────────────────────────────────────────────╮
+│                                                                                                                  │
+│  "{\"search_query\": \"The Gwen Chicago conference venue details capacity amenities pricing availability\"}"     │
+│                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭────────────────────────────────────────────────── Tool Output ───────────────────────────────────────────────────╮
+│                                                                                                                  │
+│  {'searchParameters': {'q': 'The Gwen Chicago conference venue details capacity amenities pricing                │
+│  availability', 'type': 'search', 'num': 10, 'engine': 'google'}, 'organic': [{'title': 'Meeting Venues &        │
+│  Spaces Downtown Chicago', 'link': 'https://www.thegwenchicago.com/meetings-weddings/meetings/', 'snippet':      │
+│  'Indoor Capacity: Up To 180 Guests · Outdoor Capacity: Up To 140 Guests · Sweeping City Views · Inspired        │
+│  On-Site Catering · 460+ Nearby City Attractions.', 'position': 1}, {'title': 'Meeting & Event Venues -          │
+│  Chicago', 'link': 'https://www.thegwenchicago.com/meetings-weddings/meetings/meeting-spaces/', 'snippet':       │
+│  'Choose from wide-open conference spaces, versatile meeting rooms with Magnificent Mile views, and              │
+│  non-traditional outdoor spaces to make your gathering unique.', 'position': 2}, {'title': 'The Gwen, a Luxury   │
+│  Collection Hotel, Michigan Avenue ...', 'link':                                                                 │
+│  'https://www.marriott.com/en-us/hotels/chilc-the-gwen-a-luxury-collection-hotel-michigan-avenue-chicago/overvi  │
+│  ew/', 'snippet': 'Our luxury hotel in Chicago is located near Millenium Park, Chicago Theatre and The Art       │
+│  Institute of Chicago. Book today for exclusive rates & deals.', 'position': 3}, {'title': 'The Gwen, a Luxury   │
+│  Collection Hotel, Michigan Avenue ...', 'link':                                                                 │
+│  'https://www.expedia.com/Chicago-Hotels-The-Gwen.h558027.Hotel-Information', 'snippet': 'More detailsMore       │
+│  details for Grand Room ... 24-hour business center. 3,388 square feet of conference space. Outdoors. Garden.    │
+│  Rooftop terrace ...', 'position': 4}, {'title': 'The Gwen, a Luxury Collection Hotel, Michigan Avenue ...',     │
+│  'link': 'https://www.booking.com/hotel/us/the-gwen.html', 'snippet': 'Every room at The Gwen features custom    │
+│  décor inspired by signature sculptures and includes a 65-inch flat-screen TV, free WiFi and a spacious work     │
+│  desk with an ...', 'position': 5}, {'title': 'The Gwen, a Luxury Collection Hotel, Chicago', 'link':            │
+│  'https://www.corpvenue.com/venue/the-gwen-a-luxury-collection-hotel-chicago', 'snippet': 'The Gallery ...       │
+│                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+🚀 Crew: crew
+├── 📋 Task: c52a70de-2f13-4d57-8f17-caf9e50eeb4f
+│   Status: Executing Task...
+│   ├── 🔧 Used Search the internet with Serper (1)
+│   ├── 🔧 Used Search the internet with Serper (2)
+│   ├── 🔧 Used Search the internet with Serper (3)
+│   ├── 🔧 Used Search the internet with Serper (4)
+│   ├── 🔧 Used Search the internet with Serper (5)
+│   ├── 🔧 Used Search the internet with Serper (6)
+│   ├── 🔧 Used Search the internet with Serper (7)
+│   └── 🔧 Used Search the internet with Serper (8)
+└── ✅ Memory Retrieval Completed
+    └── Sources Used
+        ├── ✅ Long Term Memory (6.26ms)
+        ├── ✅ Short Term Memory (133.57ms)
+        └── ✅ Entity Memory (100.86ms)
+╭──────────────────────────────────────────── 🔧 Agent Tool Execution ─────────────────────────────────────────────╮
+│                                                                                                                  │
+│  Agent: Conference Venue Finder                                                                                  │
+│                                                                                                                  │
+│  Thought: Thought: I now have the necessary details for The Gwen Chicago. Finally, I need to search for          │
+│  conference venue details for Taste 222.                                                                         │
+│                                                                                                                  │
+│  Using Tool: Search the internet with Serper                                                                     │
+│                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────── Tool Input ───────────────────────────────────────────────────╮
+│                                                                                                                  │
+│  "{\"search_query\": \"Taste 222 Chicago conference venue details capacity amenities pricing availability\"}"    │
+│                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭────────────────────────────────────────────────── Tool Output ───────────────────────────────────────────────────╮
+│                                                                                                                  │
+│  {'searchParameters': {'q': 'Taste 222 Chicago conference venue details capacity amenities pricing               │
+│  availability', 'type': 'search', 'num': 10, 'engine': 'google'}, 'organic': [{'title': 'Taste 222 - Chicago',   │
+│  'link': 'https://www.taste222chicago.com/', 'snippet': 'Missing: conference details capacity amenities',        │
+│  'position': 1, 'sitelinks': [{'title': 'Menus', 'link': 'https://www.taste222chicago.com/menus'}, {'title':     │
+│  'Private Events', 'link': 'https://www.taste222chicago.com/private-events'}, {'title': 'Catering', 'link':      │
+│  'https://www.taste222chicago.com/catering'}]}, {'title': 'Taste 222 | Chicago Venue - PartySlate', 'link':      │
+│  'https://www.partyslate.com/venues/taste-222', 'snippet': 'TASTE 222 can support up to 250 guests for a         │
+│  standing cocktail reception and up to 100 guests seated. Final capacity will be determined by the Events        │
+│  Manager ...', 'position': 2}, {'title': 'Full Venue Buyout - Taste 222', 'link':                                │
+│  'https://www.taste222chicago.com/private-event-spaces/full-venue-buyout', 'snippet': 'Full Venue Buyout ·       │
+│  CAPACITY. Standing: 250 Guests. Seated: 100 Guests · TOTAL AREA. 3,200+ sq. ft · AMENITIES. 260” Sony, 4k       │
+│  Ultra TV. 640" LED Screen, 4K ...', 'position': 3}, {'title': 'Private Events - Taste 222', 'link':             │
+│  'https://www.taste222chicago.com/private-events', 'snippet': 'Missing: capacity amenities', 'position': 4},     │
+│  {'title': 'Mixology & Innovation - Taste 222', 'link':                                                          │
+│  'https://www.taste222chicago.com/private-event-spaces/mixology-innovation', 'snippet': 'Missing: venue          │
+│  details', 'position': 5}, {'title': 'Taste 222 | Choose Chicago', 'link':                                       │
+│  'https://www.choosechicago.com/listing/taste-222/', 'snippet': 'Video Conferencing Available. Max Venue         │
+│  Capacity250. Private Meeting Space Available. Facility Amenities. Max Restaurant Capacity220. Private Dining    │
+│  Available.', 'position': 6}, {'title': 'Taste 222 | Chicago, Illinois, United States - The Venue Report',       │
+│  'link': 'https://www.venuereport.com/venue/taste-222/', 'snippet': 'With a family-like atmosphere, Ta...        │
+│                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+🚀 Crew: crew
+├── 📋 Task: c52a70de-2f13-4d57-8f17-caf9e50eeb4f
+│   Status: Executing Task...
+│   ├── 🔧 Used Search the internet with Serper (1)
+│   ├── 🔧 Used Search the internet with Serper (2)
+│   ├── 🔧 Used Search the internet with Serper (3)
+│   ├── 🔧 Used Search the internet with Serper (4)
+│   ├── 🔧 Used Search the internet with Serper (5)
+│   ├── 🔧 Used Search the internet with Serper (6)
+│   ├── 🔧 Used Search the internet with Serper (7)
+│   └── 🔧 Used Search the internet with Serper (8)
+└── ✅ Memory Retrieval Completed
+    └── Sources Used
+        ├── ✅ Long Term Memory (6.26ms)
+        ├── ✅ Short Term Memory (133.57ms)
+        └── ✅ Entity Memory (100.86ms)
+╭───────────────────────────────────────────── ✅ Agent Final Answer ──────────────────────────────────────────────╮
+│                                                                                                                  │
+│  Agent: Conference Venue Finder                                                                                  │
+│                                                                                                                  │
+│  Final Answer:                                                                                                   │
+│  Here are 5 potential conference venues in Chicago with detailed information regarding capacity, location,       │
+│  amenities, pricing, and availability:                                                                           │
+│                                                                                                                  │
+│  ---                                                                                                             │
+│                                                                                                                  │
+│  **1. Palmer House, a Hilton Hotel**                                                                             │
+│                                                                                                                  │
+│  - **Location:** 17 East Monroe Street, Chicago, IL 60603                                                        │
+│  - **Capacity:** Over 130,000 sq. ft. of event space. Three ballrooms (up to 1,653 people), 78 breakout rooms,   │
+│  and exhibition halls. Grand Ballroom can host 1,690 guests.                                                     │
+│  - **Amenities:** Historic ambiance, multiple ballrooms, 77 meeting rooms, VIP suites, on-site dining (Lockwood  │
+│  Restaurant & Bar), audio-visual equipment, WiFi, on-site catering, dedicated events team, guest room blocks.    │
+│  - **Pricing:** Room rates typically around $350/night; event space pricing varies by room/size/event, ranging   │
+│  from approximately $2,500–$15,000+ per day for ballrooms and meeting spaces. Contact venue for quotes.          │
+│  - **Availability:** Highly flexible, availability depends on season. Reservations recommended several months    │
+│  in advance for large conferences.                                                                               │
+│  - **References:** [Palmer House Meetings & Events](https://www.palmerhousehiltonhotel.com/meetings-events/) |   │
+│  [Hilton: Palmer House](https://www.hilton.com/en/hotels/chiphhh-palmer-house/events/meetings/)                  │
+│                                                                                                                  │
+│  ---                                                                                                             │
+│                                                                                                                  │
+│  **2. The Drake Hotel**                                                                                          │
+│                                                                                                                  │
+│  - **Location:** 140 East Walton Place, Chicago, IL 60611 (Magnificent Mile)                                     │
+│  - **Capacity:** 33,657 sq. ft. of function space, four banquet/conference areas, 14 mezzanine meeting rooms,    │
+│  21 total event rooms, two grand ballrooms. Maximum capacity: 900–1,000 guests for largest ballroom.             │
+│  - **Amenities:** On-site accommodations, indoor event space, WiFi, catering, dressing rooms, floor-to-ceiling   │
+│  windows, lake views, historic décor, audio-visual support, dedicated event planning team.                       │
+│  - **Pricing:** Average meeting room pricing starts from $2,000 for small event spaces; large ballrooms          │
+│  $10,000+ per day depending on event. Guest room rates $250–$400/night. Custom packages available.               │
+│  - **Availability:** Popular during conventions and spring/fall weekends; book 6–12 months ahead for best        │
+│  availability.                                                                                                   │
+│  - **References:** [Drake Hotel Meetings & Events](https://www.thedrakehotel.com/meetings/events-and-spaces/) |  │
+│  [Hilton: The Drake](https://www.hilton.com/en/hotels/chidhhh-the-drake/events/)                                 │
+│                                                                                                                  │
+│  ---                                                                                                             │
+│                                                                                                                  │
+│  **3. The Geraghty**                                                                                             │
+│                                                                                                                  │
+│  - **Location:** 2520 S Hoyne Ave, Chicago, IL 60608                                                             │
+│  - **Capacity:** 25,000 sq. ft. of open space; accommodates up to 1,000 guests for standing receptions or 600    │
+│  seated at tables; VIP Green Room for up to 50.                                                                  │
+│  - **Amenities:** Completely customizable space, luxury finishes, high 22-ft ceilings, secure on-site parking,   │
+│  WiFi, superior A/V capabilities, expert staff, in-house catering, break-out spaces, green room.                 │
+│  - **Pricing:** Estimated cost per guest is $400–$450; venue rental ranges from $20,000–$45,000 depending on     │
+│  date, setup, and add-ons (catering, tech).                                                                      │
+│  - **Availability:** Best availability for weekdays and Sundays; peak event season (spring/fall) may require 9+  │
+│  months advance booking.                                                                                         │
+│  - **References:** [The Geraghty](https://thegeraghty.com/) | [PartySlate Venue                                  │
+│  Details](https://www.partyslate.com/venues/the-geraghty) | [Choose Chicago Venue                                │
+│  Info](https://www.choosechicago.com/listing/the-geraghty/)                                                      │
+│                                                                                                                  │
+│  ---                                                                                                             │
+│                                                                                                                  │
+│  **4. The Gwen, a Luxury Collection Hotel**                                                                      │
+│                                                                                                                  │
+│  - **Location:** 521 N Rush St, Chicago, IL 60611 (Magnificent Mile)                                             │
+│  - **Capacity:** Indoor up to 180 guests, outdoor terrace up to 140 guests; Gallery Ballroom: 3,388 sq. ft.,     │
+│  max 400 guests; rooftop terrace: 3,000 sq. ft.                                                                  │
+│  - **Amenities:** Sweeping city views, inspired on-site catering, 24-hour business center, modern A/V            │
+│  capabilities, WiFi, luxury guest rooms, rooftop event spaces, custom décor, fitness center.                     │
+│  - **Pricing:** Event space rental starts at $2,500/day; ballrooms $8,000–$20,000 depending on season. Guest     │
+│  rooms average $300–$500/night; rooftop premium options available.                                               │
+│  - **Availability:** Rooftop spaces book early for spring/summer; indoor ballrooms more flexible. Check website  │
+│  for capacity charts, floor plans, and virtual tours.                                                            │
+│  - **References:** [The Gwen Meetings](https://www.thegwenchicago.com/meetings-weddings/meetings/) | [Gallery    │
+│  Ballroom Details](https://www.corpvenue.com/venue/the-gwen-a-luxury-collection-hotel-chicago) | [Floor Plans &  │
+│  Capacities](https://www.thegwenchicago.com/meetings-weddings/floor-plans-capacity-charts/)                      │
+│                                                                                                                  │
+│  ---                                                                                                             │
+│                                                                                                                  │
+│  **5. Taste 222**                                                                                                │
+│                                                                                                                  │
+│  - **Location:** 222 N Canal St, Chicago, IL 60606 (West Loop)                                                   │
+│  - **Capacity:** Full venue buyout: standing up to 250 guests, seated up to 100 guests; private spaces for 80+;  │
+│  total event area: 3,200+ sq. ft.                                                                                │
+│  - **Amenities:** Modern ambiance, large private dining room, 260” Sony 4k TV, LED screen, video conferencing,   │
+│  WiFi, full-service catering, cocktail program, private event staff, flexible event layouts, mixology packages.  │
+│  - **Pricing:** Average rental $3,000–$7,500+ for full venue. Custom packages for smaller areas; food/beverage   │
+│  minimums usually apply ($75–$125 per person).                                                                   │
+│  - **Availability:** Strong weekday and off-peak availability; weekends and holidays book 6+ months in advance.  │
+│  Event manager customizes packages and confirms availability.                                                    │
+│  - **References:** [Taste 222 Private Events](https://www.taste222chicago.com/private-events) | [Venue           │
+│  Report](https://www.venuereport.com/venue/taste-222/) | [PartySlate Venue                                       │
+│  Info](https://www.partyslate.com/venues/taste-222)                                                              │
+│                                                                                                                  │
+│  ---                                                                                                             │
+│                                                                                                                  │
+│  All listed venues are highly rated and centrally located in Chicago. For exact pricing and updated              │
+│  availability, contact venues directly or use their respective online inquiry forms as policies and quotes may   │
+│  vary based on conference scope, season, and specific dates.                                                     │
+│                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+2025-09-08 16:22:24,579 - 22568 - rag_storage.py-rag_storage:94 - ERROR: Error during short_term save: APIStatusError.__init__() missing 2 required keyword-only arguments: 'response' and 'body'
+Failed to add to long term memory: Failed to convert text into a Pydantic model due to error: litellm.APIError:
+AzureException APIError - argument of type 'NoneType' is not iterable
+🚀 Crew: crew
+├── 📋 Task: c52a70de-2f13-4d57-8f17-caf9e50eeb4f
+│   Assigned to: Conference Venue Finder
+│   Status: ✅ Completed
+│   ├── 🔧 Used Search the internet with Serper (1)
+│   ├── 🔧 Used Search the internet with Serper (2)
+│   ├── 🔧 Used Search the internet with Serper (3)
+│   ├── 🔧 Used Search the internet with Serper (4)
+│   ├── 🔧 Used Search the internet with Serper (5)
+│   ├── 🔧 Used Search the internet with Serper (6)
+│   ├── 🔧 Used Search the internet with Serper (7)
+│   ├── 🔧 Used Search the internet with Serper (8)
+│   └── 🧠 Memory Update Overall
+│       └── ✅ Short Term Memory Memory Saved (100.08ms)
+└── ✅ Memory Retrieval Completed
+    └── Sources Used
+        ├── ✅ Long Term Memory (6.26ms)
+        ├── ✅ Short Term Memory (133.57ms)
+        └── ✅ Entity Memory (100.86ms)
+╭──────────────────────────────────────────────── Task Completion ─────────────────────────────────────────────────╮
+│                                                                                                                  │
+│  Task Completed                                                                                                  │
+│  Name: c52a70de-2f13-4d57-8f17-caf9e50eeb4f                                                                      │
+│  Agent: Conference Venue Finder                                                                                  │
+│  Tool Args:                                                                                                      │
+│                                                                                                                  │
+│                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+📋 Task: c52a70de-2f13-4d57-8f17-caf9e50eeb4f
+Assigned to: Conference Venue Finder
+Status: ✅ Completed
+├── 🔧 Used Search the internet with Serper (1)
+📋 Task: c52a70de-2f13-4d57-8f17-caf9e50eeb4f
+Assigned to: Conference Venue Finder
+Status: ✅ Completed
+├── 🔧 Used Search the internet with Serper (1)
+├── 🔧 Used Search the internet with Serper (2)
+├── 🔧 Used Search the internet with Serper (3)
+├── 🔧 Used Search the internet with Serper (4)
+├── 🔧 Used Search the internet with Serper (5)
+├── 🔧 Used Search the internet with Serper (6)
+├── 🔧 Used Search the internet with Serper (7)
+├── 🔧 Used Search the internet with Serper (8)
+├── 🧠 Memory Update Overall
+│   └── ✅ Short Term Memory Memory Saved (100.08ms)
+└── ✅ Memory Retrieval Completed
+    └── Sources Used
+        ├── ✅ Long Term Memory (1.73ms)
+        ├── ✅ Short Term Memory (310.61ms)
+        └── ✅ Entity Memory (137.82ms)
+╭──────────────────────────────────────────────── 🤖 Agent Started ────────────────────────────────────────────────╮
+│                                                                                                                  │
+│  Agent: Venue Quality Assurance Specialist                                                                       │
+│                                                                                                                  │
+│  Task: Review the venue options provided by the Conference Venue Finder. Ensure that each venue meets all the    │
+│  specified requirements and standards. Provide a detailed report on the suitability of each venue.               │
+│                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+🚀 Crew: crew
+├── 📋 Task: c52a70de-2f13-4d57-8f17-caf9e50eeb4f
+│   Assigned to: Conference Venue Finder
+│   Status: ✅ Completed
+│   ├── 🔧 Used Search the internet with Serper (1)
+│   ├── 🔧 Used Search the internet with Serper (2)
+│   ├── 🔧 Used Search the internet with Serper (3)
+│   ├── 🔧 Used Search the internet with Serper (4)
+│   ├── 🔧 Used Search the internet with Serper (5)
+│   ├── 🔧 Used Search the internet with Serper (6)
+│   ├── 🔧 Used Search the internet with Serper (7)
+│   ├── 🔧 Used Search the internet with Serper (8)
+│   ├── 🧠 Memory Update Overall
+│   │   └── ✅ Short Term Memory Memory Saved (100.08ms)
+│   └── ✅ Memory Retrieval Completed
+│       └── Sources Used
+│           ├── ✅ Long Term Memory (1.73ms)
+│           ├── ✅ Short Term Memory (310.61ms)
+│           └── ✅ Entity Memory (137.82ms)
+├── ✅ Memory Retrieval Completed
+│   └── Sources Used
+│       ├── ✅ Long Term Memory (6.26ms)
+│       ├── ✅ Short Term Memory (133.57ms)
+│       └── ✅ Entity Memory (100.86ms)
+└── 📋 Task: 2cd88f8c-f715-4342-8b6b-0e0300482f69
+    Status: Executing Task...
+    └── 🔧 Used Search the internet with Serper (9)
+╭──────────────────────────────────────────── 🔧 Agent Tool Execution ─────────────────────────────────────────────╮
+│                                                                                                                  │
+│  Agent: Venue Quality Assurance Specialist                                                                       │
+│                                                                                                                  │
+│  Thought: Thought: I should verify the details and reputation of each venue, confirm amenities, and look for     │
+│  any additional strengths, weaknesses, or user feedback to support my review. I will search for reviews and      │
+│  recent event experiences at Palmer House, a Hilton Hotel first.                                                 │
+│                                                                                                                  │
+│  Using Tool: Search the internet with Serper                                                                     │
+│                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────── Tool Input ───────────────────────────────────────────────────╮
+│                                                                                                                  │
+│  "{\"search_query\": \"Palmer House Hilton Chicago conference venue reviews\"}"                                  │
+│                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭────────────────────────────────────────────────── Tool Output ───────────────────────────────────────────────────╮
+│                                                                                                                  │
+│  {'searchParameters': {'q': 'Palmer House Hilton Chicago conference venue reviews', 'type': 'search', 'num':     │
+│  10, 'engine': 'google'}, 'organic': [{'title': 'Review of Palmer House a Hilton Hotel, Chicago, IL -            │
+│  Tripadvisor', 'link':                                                                                           │
+│  'https://www.tripadvisor.com/ShowUserReviews-g35805-d111501-r424442919-Palmer_House_a_Hilton_Hotel-Chicago_Ill  │
+│  inois.html', 'snippet': 'Palmer House a Hilton Hotel: Outstanding national conference ... The rooms were        │
+│  great, staff was awesome, meeting rooms, crew, and everything else were great.', 'position': 1}, {'title':      │
+│  'Palmer House a Hilton Hotel - Chicago, Illinois - Yelp', 'link':                                               │
+│  'https://www.yelp.com/biz/palmer-house-a-hilton-hotel-chicago-3', 'snippet': 'The rooms are average and a bit   │
+│  small in size. The restaurants on site had great offerings and were delicious the two times we ate there. The   │
+│  pool was closed ...', 'position': 2}, {'title': 'Timeless Elegance: Review of Palmer House Hilton in Chicago',  │
+│  'link': 'https://socialmaharaj.com/2024/01/21/palmer-house-hilton-chicago-review/', 'snippet': "The Palmer      │
+│  House Hilton is the place to be. A stay that's not just about comfort, but about immersing yourself in a        │
+│  timeless symphony of beauty and charm.", 'position': 3}, {'title': 'Palmer House Hilton Chicago Review -        │
+│  Reddit', 'link': 'https://www.reddit.com/r/Hilton/comments/1ffg7vn/palmer_house_hilton_chicago_review/',        │
+│  'snippet': "We stayed at Palmer House in 2022. It was one of the worst stays we've ever had. Just horrible      │
+│  service, dilapidated rooms. Truly miserable.", 'position': 4}, {'title': 'Palmer House a Hilton Hotel -         │
+│  UPDATED 2025 Prices, Reviews ...', 'link':                                                                      │
+│  'https://www.tripadvisor.ca/Hotel_Review-g35805-d111501-Reviews-Palmer_House_a_Hilton_Hotel-Chicago_Illinois.h  │
+│  tml', 'snippet': 'We had a terrific stay at this vibrant and historic hotel in Chicago. This is the best        │
+│  location, only one block from Millennium Park and it is so Central a lot ...', 'position': 5}, {'title':        │
+│  'Palmer House a Hilton Hotel Reviews, Deals & Photo...                                                          │
+│                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+🚀 Crew: crew
+├── 📋 Task: c52a70de-2f13-4d57-8f17-caf9e50eeb4f
+│   Assigned to: Conference Venue Finder
+│   Status: ✅ Completed
+│   ├── 🔧 Used Search the internet with Serper (1)
+│   ├── 🔧 Used Search the internet with Serper (2)
+│   ├── 🔧 Used Search the internet with Serper (3)
+│   ├── 🔧 Used Search the internet with Serper (4)
+│   ├── 🔧 Used Search the internet with Serper (5)
+│   ├── 🔧 Used Search the internet with Serper (6)
+│   ├── 🔧 Used Search the internet with Serper (7)
+│   ├── 🔧 Used Search the internet with Serper (8)
+│   ├── 🧠 Memory Update Overall
+│   │   └── ✅ Short Term Memory Memory Saved (100.08ms)
+│   └── ✅ Memory Retrieval Completed
+│       └── Sources Used
+│           ├── ✅ Long Term Memory (1.73ms)
+│           ├── ✅ Short Term Memory (310.61ms)
+│           └── ✅ Entity Memory (137.82ms)
+├── ✅ Memory Retrieval Completed
+│   └── Sources Used
+│       ├── ✅ Long Term Memory (6.26ms)
+│       ├── ✅ Short Term Memory (133.57ms)
+│       └── ✅ Entity Memory (100.86ms)
+└── 📋 Task: 2cd88f8c-f715-4342-8b6b-0e0300482f69
+    Status: Executing Task...
+    ├── 🔧 Used Search the internet with Serper (9)
+    └── 🔧 Used Search the internet with Serper (10)
+╭──────────────────────────────────────────── 🔧 Agent Tool Execution ─────────────────────────────────────────────╮
+│                                                                                                                  │
+│  Agent: Venue Quality Assurance Specialist                                                                       │
+│                                                                                                                  │
+│  Thought: Thought: I have gathered reviews for Palmer House. Next, I should search for conference and event      │
+│  reviews for The Drake Hotel to evaluate its strengths, issues, and client experiences.                          │
+│                                                                                                                  │
+│  Using Tool: Search the internet with Serper                                                                     │
+│                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────── Tool Input ───────────────────────────────────────────────────╮
+│                                                                                                                  │
+│  "{\"search_query\": \"The Drake Hotel Chicago conference venue reviews\"}"                                      │
+│                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭────────────────────────────────────────────────── Tool Output ───────────────────────────────────────────────────╮
+│                                                                                                                  │
+│  {'searchParameters': {'q': 'The Drake Hotel Chicago conference venue reviews', 'type': 'search', 'num': 10,     │
+│  'engine': 'google'}, 'organic': [{'title': 'THE DRAKE - Updated 2025 Prices & Hotel Reviews (Chicago, IL)',     │
+│  'link': 'https://www.tripadvisor.com/Hotel_Review-g35805-d87645-Reviews-The_Drake-Chicago_Illinois.html',       │
+│  'snippet': "All staff were exceptionally helpful and friendly, especially the Maitre d', Joey, when I was       │
+│  there on a one night stay visiting a Japanese friend. We enjoyed ...", 'position': 1}, {'title': 'The Drake     │
+│  Hotel Reviews - Chicago, IL - Wedding Wire', 'link':                                                            │
+│  'https://www.weddingwire.com/reviews/the-drake-hotel-chicago/641265b7593c0b42.html', 'snippet': "5.0 Fabulous   │
+│  Wedding Venue!! Five stars is not high enough for The Drake Hotel Chicago! Every aspect of my daughter's        │
+│  wedding planning and celebration was ...", 'position': 2}, {'title': 'The Drake, a Hilton Hotel + Updated       │
+│  Prices - The Knot', 'link': 'https://www.theknot.com/marketplace/the-drake-a-hilton-hotel-chicago-il-1085264',  │
+│  'snippet': 'The food was incredible, the service was first class and the venue is unparalleled. I thank the     │
+│  entire staff: the chefs, the servers, the bartenders and ...', 'position': 3}, {'title': 'The Drake - Hotels -  │
+│  Yelp', 'link': 'https://www.yelp.com/biz/the-drake-chicago-2', 'snippet': 'The Drake is definitely a historic   │
+│  Hotel in Chicago facing Lake Michigan!! Hospitality here is incredible and Staff are always friendly! Great     │
+│  location near ...', 'position': 4}, {'title': 'The Drake Hotel Review - Heirloom Event Company', 'link':        │
+│  'https://heirloomeventcompany.com/blog/the-drake-hotel-review', 'snippet': 'Gold Coast Room: Spanning 6,838     │
+│  square feet, this grand ballroom offers stunning views of Lake Michigan and can accommodate up to 900 guests,   │
+│  ...', 'position': 5}, {'title': 'The Drake Oak Brook, Autograph Collection - Tripadvisor', 'link':              │
+│  'https://www.tripadvisor.com/ShowUserReviews-g36468-d7933984-r438868317-The_Drake_Oak_Brook_Autograph_Collecti  │
+│  on-Oak_...                                                                                                      │
+│                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+🚀 Crew: crew
+├── 📋 Task: c52a70de-2f13-4d57-8f17-caf9e50eeb4f
+│   Assigned to: Conference Venue Finder
+│   Status: ✅ Completed
+│   ├── 🔧 Used Search the internet with Serper (1)
+│   ├── 🔧 Used Search the internet with Serper (2)
+│   ├── 🔧 Used Search the internet with Serper (3)
+│   ├── 🔧 Used Search the internet with Serper (4)
+│   ├── 🔧 Used Search the internet with Serper (5)
+│   ├── 🔧 Used Search the internet with Serper (6)
+│   ├── 🔧 Used Search the internet with Serper (7)
+│   ├── 🔧 Used Search the internet with Serper (8)
+│   ├── 🧠 Memory Update Overall
+│   │   └── ✅ Short Term Memory Memory Saved (100.08ms)
+│   └── ✅ Memory Retrieval Completed
+│       └── Sources Used
+│           ├── ✅ Long Term Memory (1.73ms)
+│           ├── ✅ Short Term Memory (310.61ms)
+│           └── ✅ Entity Memory (137.82ms)
+├── ✅ Memory Retrieval Completed
+│   └── Sources Used
+│       ├── ✅ Long Term Memory (6.26ms)
+│       ├── ✅ Short Term Memory (133.57ms)
+│       └── ✅ Entity Memory (100.86ms)
+└── 📋 Task: 2cd88f8c-f715-4342-8b6b-0e0300482f69
+    Status: Executing Task...
+    ├── 🔧 Used Search the internet with Serper (9)
+    ├── 🔧 Used Search the internet with Serper (10)
+    └── 🔧 Used Search the internet with Serper (11)
+╭──────────────────────────────────────────── 🔧 Agent Tool Execution ─────────────────────────────────────────────╮
+│                                                                                                                  │
+│  Agent: Venue Quality Assurance Specialist                                                                       │
+│                                                                                                                  │
+│  Thought: Thought: I have conference and user reviews for The Drake Hotel. Next, to ensure a thorough            │
+│  comparison, I will seek event and venue reviews for The Geraghty, as it is a dedicated event space known for    │
+│  customization.                                                                                                  │
+│                                                                                                                  │
+│  Using Tool: Search the internet with Serper                                                                     │
+│                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────── Tool Input ───────────────────────────────────────────────────╮
+│                                                                                                                  │
+│  "{\"search_query\": \"The Geraghty Chicago event venue reviews\"}"                                              │
+│                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭────────────────────────────────────────────────── Tool Output ───────────────────────────────────────────────────╮
+│                                                                                                                  │
+│  {'searchParameters': {'q': 'The Geraghty Chicago event venue reviews', 'type': 'search', 'num': 10, 'engine':   │
+│  'google'}, 'organic': [{'title': 'THE GERAGHTY - 2520 S Hoyne Ave, Chicago, Illinois - Yelp', 'link':           │
+│  'https://www.yelp.com/biz/the-geraghty-chicago-2', 'snippet': 'Great Space attended a school gala which very    │
+│  nicely organized. There is plenty of parking, coat check and clean restrooms. Room for DJ and dancing.',        │
+│  'position': 1}, {'title': 'The Geraghty | Chicago IL - Facebook', 'link':                                       │
+│  'https://www.facebook.com/TheGeraghty/', 'snippet': "The Geraghty is a sophisticated and innovative venue,      │
+│  intentionally designed to realize client's visions with creative artistry and unlimited potential.",            │
+│  'position': 2}, {'title': 'The Geraghty | Wedding Venues | Cost, Reviews & Photos - Zola', 'link':              │
+│  'https://www.zola.com/wedding-vendors/wedding-venues/the-geraghty', 'snippet': "The Geraghty, 2520 S Hoyne      │
+│  Ave, Chicago, IL based Venue, Unclaimed, No reviews yet. Write a review, Is this your business? Hi, we're big   │
+│  fans! And so are our ...", 'position': 3}, {'title': 'The Geraghty - Rooftop Weddings - Chicago, IL -           │
+│  WeddingWire', 'link': 'https://www.weddingwire.com/biz/the-geraghty/314e1bc5a68a333a.html', 'snippet': 'The     │
+│  Geraghty was built to be completely customizable to inspire innovation and to allow event designers to create   │
+│  captivating experiences with flawless ...', 'position': 4, 'sitelinks': [{'title': 'About', 'link':             │
+│  'https://www.weddingwire.com/biz/the-geraghty/314e1bc5a68a333a.html#description'}, {'title': 'FAQ', 'link':     │
+│  'https://www.weddingwire.com/biz/the-geraghty/314e1bc5a68a333a.html#faqs'}, {'title': 'Reviews', 'link':        │
+│  'https://www.weddingwire.com/biz/the-geraghty/314e1bc5a68a333a.html#reviews'}]}, {'title': 'The Geraghty |      │
+│  Chicago Venue | 869 photos - PartySlate', 'link': 'https://www.partyslate.com/venues/the-geraghty', 'snippet':  │
+│  'Acclaimed designer & tastemaker, Tom Kehoe, welcomes you to The Geraghty - a sophisticated, customizable       │
+│  space redefining...                                                                                             │
+│                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+🚀 Crew: crew
+├── 📋 Task: c52a70de-2f13-4d57-8f17-caf9e50eeb4f
+│   Assigned to: Conference Venue Finder
+│   Status: ✅ Completed
+│   ├── 🔧 Used Search the internet with Serper (1)
+│   ├── 🔧 Used Search the internet with Serper (2)
+│   ├── 🔧 Used Search the internet with Serper (3)
+│   ├── 🔧 Used Search the internet with Serper (4)
+│   ├── 🔧 Used Search the internet with Serper (5)
+│   ├── 🔧 Used Search the internet with Serper (6)
+│   ├── 🔧 Used Search the internet with Serper (7)
+│   ├── 🔧 Used Search the internet with Serper (8)
+│   ├── 🧠 Memory Update Overall
+│   │   └── ✅ Short Term Memory Memory Saved (100.08ms)
+│   └── ✅ Memory Retrieval Completed
+│       └── Sources Used
+│           ├── ✅ Long Term Memory (1.73ms)
+│           ├── ✅ Short Term Memory (310.61ms)
+│           └── ✅ Entity Memory (137.82ms)
+├── ✅ Memory Retrieval Completed
+│   └── Sources Used
+│       ├── ✅ Long Term Memory (6.26ms)
+│       ├── ✅ Short Term Memory (133.57ms)
+│       └── ✅ Entity Memory (100.86ms)
+└── 📋 Task: 2cd88f8c-f715-4342-8b6b-0e0300482f69
+    Status: Executing Task...
+    ├── 🔧 Used Search the internet with Serper (9)
+    ├── 🔧 Used Search the internet with Serper (10)
+    ├── 🔧 Used Search the internet with Serper (11)
+    └── 🔧 Used Search the internet with Serper (12)
+╭──────────────────────────────────────────── 🔧 Agent Tool Execution ─────────────────────────────────────────────╮
+│                                                                                                                  │
+│  Agent: Venue Quality Assurance Specialist                                                                       │
+│                                                                                                                  │
+│  Thought: Thought: I have found positive feedback for The Geraghty's flexibility and amenities, but I need       │
+│  similar details for The Gwen to ensure a balanced review. I will look for meeting and event reviews             │
+│  highlighting strengths or weaknesses at The Gwen, a Luxury Collection Hotel.                                    │
+│                                                                                                                  │
+│  Using Tool: Search the internet with Serper                                                                     │
+│                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────── Tool Input ───────────────────────────────────────────────────╮
+│                                                                                                                  │
+│  "{\"search_query\": \"The Gwen Chicago meeting event venue reviews\"}"                                          │
+│                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭────────────────────────────────────────────────── Tool Output ───────────────────────────────────────────────────╮
+│                                                                                                                  │
+│  {'searchParameters': {'q': 'The Gwen Chicago meeting event venue reviews', 'type': 'search', 'num': 10,         │
+│  'engine': 'google'}, 'organic': [{'title': "Don't have your wedding reception at the Gwen - Chicago", 'link':   │
+│  'https://www.tripadvisor.com/ShowUserReviews-g35805-d217498-r715774712-The_Gwen_A_Luxury_Collection_Hotel_Mich  │
+│  igan_Avenue_Chicago-Chicago_Illinois.html', 'snippet': 'We find this lack of communication unprofessional and   │
+│  entirely unacceptable. I would understand if we were using your venue at no cost, but my parents paid a ...',   │
+│  'position': 1}, {'title': 'The Gwen, a Luxury Collection Hotel, Chicago', 'link':                               │
+│  'https://www.theknot.com/marketplace/the-gwen-a-luxury-collection-hotel-chicago-chicago-il-821399', 'snippet':  │
+│  'The food was delicious and all of our guests left very impressed! Highly recommend considering this venue for  │
+│  your event! Read more.', 'position': 2}, {'title': 'The Gwen, A Luxury Collection Hotel, Michigan Avenue ...',  │
+│  'link': 'https://www.yelp.com/biz/the-gwen-a-luxury-collection-hotel-michigan-avenue-chicago-chicago-2',        │
+│  'snippet': 'Rated: 11 out of 10 We had a wonderful stay at The Gwen hotel for our 22nd Anniversary. Ricardo     │
+│  went over and beyond to make our stay pleasant.', 'position': 3}, {'title': 'The Gwen Hotel - Chicago, IL -     │
+│  WeddingWire', 'link':                                                                                           │
+│  'https://www.weddingwire.com/biz/the-gwen-a-luxury-collection-hotel-chicago-chicago/a8cff639f3af775a.html',     │
+│  'snippet': 'The Gwen Hotel is recommended by 100% of couples who have used their services. Their overall        │
+│  rating is 5.0, with the same score awarded for quality of service, ...', 'position': 4}, {'title': 'Reviews of  │
+│  The Gwen, a Luxury Collection Hotel, Michigan ...', 'link':                                                     │
+│  'https://www.marriott.com/en-us/hotels/chilc-the-gwen-a-luxury-collection-hotel-michigan-avenue-chicago/review  │
+│  s/', 'snippet': 'The fundamental issue with The Gwen is that it markets itself as a 5-star hotel, but this      │
+│  feels like false advertising. The property objectively lacks the ...', 'position': 5}, {'title...               │
+│                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+🚀 Crew: crew
+├── 📋 Task: c52a70de-2f13-4d57-8f17-caf9e50eeb4f
+│   Assigned to: Conference Venue Finder
+│   Status: ✅ Completed
+│   ├── 🔧 Used Search the internet with Serper (1)
+│   ├── 🔧 Used Search the internet with Serper (2)
+│   ├── 🔧 Used Search the internet with Serper (3)
+│   ├── 🔧 Used Search the internet with Serper (4)
+│   ├── 🔧 Used Search the internet with Serper (5)
+│   ├── 🔧 Used Search the internet with Serper (6)
+│   ├── 🔧 Used Search the internet with Serper (7)
+│   ├── 🔧 Used Search the internet with Serper (8)
+│   ├── 🧠 Memory Update Overall
+│   │   └── ✅ Short Term Memory Memory Saved (100.08ms)
+│   └── ✅ Memory Retrieval Completed
+│       └── Sources Used
+│           ├── ✅ Long Term Memory (1.73ms)
+│           ├── ✅ Short Term Memory (310.61ms)
+│           └── ✅ Entity Memory (137.82ms)
+├── ✅ Memory Retrieval Completed
+│   └── Sources Used
+│       ├── ✅ Long Term Memory (6.26ms)
+│       ├── ✅ Short Term Memory (133.57ms)
+│       └── ✅ Entity Memory (100.86ms)
+└── 📋 Task: 2cd88f8c-f715-4342-8b6b-0e0300482f69
+    Status: Executing Task...
+    ├── 🔧 Used Search the internet with Serper (9)
+    ├── 🔧 Used Search the internet with Serper (10)
+    ├── 🔧 Used Search the internet with Serper (11)
+    ├── 🔧 Used Search the internet with Serper (12)
+    └── 🔧 Used Search the internet with Serper (13)
+╭──────────────────────────────────────────── 🔧 Agent Tool Execution ─────────────────────────────────────────────╮
+│                                                                                                                  │
+│  Agent: Venue Quality Assurance Specialist                                                                       │
+│                                                                                                                  │
+│  Thought: Thought: I have information about The Gwen, noting both strengths and a few negative points in event   │
+│  execution and communication. Next, I will search for event reviews for Taste 222, as it has a smaller capacity  │
+│  and unique amenities, and I need to identify if there are any significant concerns or standout features before  │
+│  composing the final report.                                                                                     │
+│                                                                                                                  │
+│  Using Tool: Search the internet with Serper                                                                     │
+│                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────── Tool Input ───────────────────────────────────────────────────╮
+│                                                                                                                  │
+│  "{\"search_query\": \"Taste 222 Chicago event venue reviews\"}"                                                 │
+│                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭────────────────────────────────────────────────── Tool Output ───────────────────────────────────────────────────╮
+│                                                                                                                  │
+│  {'searchParameters': {'q': 'Taste 222 Chicago event venue reviews', 'type': 'search', 'num': 10, 'engine':      │
+│  'google'}, 'organic': [{'title': 'Taste 222 Restaurant - Chicago, IL', 'link':                                  │
+│  'https://www.opentable.com/r/taste-222-chicago', 'snippet': 'Taste 222 offers a fantastic dining experience     │
+│  with "amazing food" and "impeccable service." The venue provides a "casual yet elegant" atmosphere, making it   │
+│  ...', 'position': 1}, {'title': 'TASTE 222, Chicago - Fulton River District - Restaurant ...', 'link':          │
+│  'https://www.tripadvisor.com/Restaurant_Review-g35805-d14954058-Reviews-Taste_222-Chicago_Illinois.html',       │
+│  'snippet': 'Venue is modern and chic with a huge dining or event area in back. Service is quick and attentive.  │
+│  Had the lobster roll lunch special with fries and salad. The ...', 'position': 2}, {'title': 'TASTE 222 -       │
+│  Restaurant Reviews', 'link': 'https://www.yelp.com/biz/taste-222-chicago?start=40', 'snippet': 'Service is      │
+│  always great, especially the tall young man with the dreads. Ambiance is so sexy classy. The spot is not big    │
+│  but big enough. Nice and intimate. They ...', 'position': 3}, {'title': 'Taste 222 - Chicago', 'link':          │
+│  'https://www.taste222chicago.com/', 'snippet': "Discover Taste 222, Chicago's premier Black-owned restaurant &  │
+│  event venue in Fulton Market. Innovative cuisine & versatile spaces for unforgettable experiences",             │
+│  'position': 4}, {'title': 'Taste 222 Chicago | Chicago IL', 'link': 'https://www.facebook.com/Taste222/',       │
+│  'snippet': "76% recommend (685 Reviews). Taste 222 Chicago is at Taste 222 Chicago. 1d · \U000f07e0.            │
+│  \U000f07dd. Taste 222's customizable event menus ensure every party guest finds ...", 'position': 5},           │
+│  {'title': 'TASTE 222 - Restaurant Reviews', 'link': 'https://www.yelp.com/biz/taste-222-chicago', 'snippet':    │
+│  'Taste 222 4.2 (131 reviews) $$Moderate New American, Coffee & Tea, Cocktail Bars Open • 11:00 am - 7:00 pm By  │
+│  appointment only', 'position': 6}, {'title': 'Taste 222 | Chicago Venue', 'link':                               │
+│  'https://www.partyslate.co...                                                                                   │
+│                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+🚀 Crew: crew
+├── 📋 Task: c52a70de-2f13-4d57-8f17-caf9e50eeb4f
+│   Assigned to: Conference Venue Finder
+│   Status: ✅ Completed
+│   ├── 🔧 Used Search the internet with Serper (1)
+│   ├── 🔧 Used Search the internet with Serper (2)
+│   ├── 🔧 Used Search the internet with Serper (3)
+│   ├── 🔧 Used Search the internet with Serper (4)
+│   ├── 🔧 Used Search the internet with Serper (5)
+│   ├── 🔧 Used Search the internet with Serper (6)
+│   ├── 🔧 Used Search the internet with Serper (7)
+│   ├── 🔧 Used Search the internet with Serper (8)
+│   ├── 🧠 Memory Update Overall
+│   │   └── ✅ Short Term Memory Memory Saved (100.08ms)
+│   └── ✅ Memory Retrieval Completed
+│       └── Sources Used
+│           ├── ✅ Long Term Memory (1.73ms)
+│           ├── ✅ Short Term Memory (310.61ms)
+│           └── ✅ Entity Memory (137.82ms)
+├── ✅ Memory Retrieval Completed
+│   └── Sources Used
+│       ├── ✅ Long Term Memory (6.26ms)
+│       ├── ✅ Short Term Memory (133.57ms)
+│       └── ✅ Entity Memory (100.86ms)
+└── 📋 Task: 2cd88f8c-f715-4342-8b6b-0e0300482f69
+    Status: Executing Task...
+    ├── 🔧 Used Search the internet with Serper (9)
+    ├── 🔧 Used Search the internet with Serper (10)
+    ├── 🔧 Used Search the internet with Serper (11)
+    ├── 🔧 Used Search the internet with Serper (12)
+    └── 🔧 Used Search the internet with Serper (13)
+╭───────────────────────────────────────────── ✅ Agent Final Answer ──────────────────────────────────────────────╮
+│                                                                                                                  │
+│  Agent: Venue Quality Assurance Specialist                                                                       │
+│                                                                                                                  │
+│  Final Answer:                                                                                                   │
+│  **Venue Quality Assurance Report: Chicago Conference Venues**                                                   │
+│                                                                                                                  │
+│  ---                                                                                                             │
+│                                                                                                                  │
+│  ### 1. Palmer House, a Hilton Hotel                                                                             │
+│                                                                                                                  │
+│  **Strengths:**                                                                                                  │
+│  - **Space & Capacity:** Extremely versatile with over 130,000 sq. ft. of event space, numerous breakout rooms,  │
+│  and three large ballrooms (Grand Ballroom: up to 1,690 guests). This meets and exceeds requirements for large   │
+│  conferences and exhibitions.                                                                                    │
+│  - **Location:** Centrally positioned downtown, walking distance to Millennium Park and major city attractions.  │
+│  - **Amenities:** Historic ambiance, on-site dining (Lockwood Restaurant & Bar), comprehensive A/V support,      │
+│  WiFi, on-site catering, VIP suites, guest room blocks, and a dedicated events team.                             │
+│  - **Service:** Repeatedly praised in multiple reviews (TripAdvisor, Yelp, Expedia) for excellent service at     │
+│  events and conferences. Staff described as “awesome,” and the support for large meetings is consistently        │
+│  strong.                                                                                                         │
+│  - **References:** Hilton advertises a specialized events team and adaptable event infrastructure, which is      │
+│  supported by user experiences.                                                                                  │
+│                                                                                                                  │
+│  **Issues:**                                                                                                     │
+│  - **Accommodation Quality:** Some guests note that the rooms, while comfortable and clean, can be average in    │
+│  size and could benefit from updates. Negative experiences (Reddit, Yelp) cite “dilapidated rooms” and           │
+│  occasional poor service—a potential concern during full occupancy.                                              │
+│  - **Pricing:** High-end, with room rates $350+/night and event space $2,500–$15,000+ per day. Could be          │
+│  prohibitive for budget-conscious events.                                                                        │
+│                                                                                                                  │
+│  **Suitability:**                                                                                                │
+│  Palmer House is an outstanding venue for large, prestige events seeking a downtown location, with extensive     │
+│  space and strong banquet/meeting support. The classic setting suits high-profile occasions. However, attention  │
+│  should be paid to ensuring guest room quality, especially for VIP/high-expectation clientele. Booking well in   │
+│  advance is recommended due to demand.                                                                           │
+│                                                                                                                  │
+│  ---                                                                                                             │
+│                                                                                                                  │
+│  ### 2. The Drake Hotel                                                                                          │
+│                                                                                                                  │
+│  **Strengths:**                                                                                                  │
+│  - **Space & Capacity:** Offers over 33,000 sq. ft. of elegant event space, large ballrooms for up to 1,000      │
+│  guests—ideal for mid-to-large conferences.                                                                      │
+│  - **Location:** Prime Magnificent Mile address next to Lake Michigan, enhancing guest impression and access.    │
+│  - **Amenities:** Historic décor, lake views, 21 event rooms, full A/V, on-site catering, and dedicated event    │
+│  planning staff. Highly customizable spaces.                                                                     │
+│  - **Service:** Universally praised for attentive, friendly, and accommodating staff (WeddingWire, TripAdvisor,  │
+│  The Knot). Events described as “first class,” with seamless service in all event phases. Food and beverage      │
+│  quality is routinely ranked highly.                                                                             │
+│  - **Atmosphere:** Gold Coast Room is particularly noted for its views and grandeur; the hotel’s iconic Chicago  │
+│  presence adds prestige to events.                                                                               │
+│                                                                                                                  │
+│  **Issues:**                                                                                                     │
+│  - **Room Experience:** While most reviews are positive, a minority of guests cite dated rooms and plumbing      │
+│  issues (Reddit), which could impact guest satisfaction if not managed.                                          │
+│  - **Availability:** Bookings are highly sought after during convention seasons; reservations should be made     │
+│  6–12 months in advance.                                                                                         │
+│                                                                                                                  │
+│  **Suitability:**                                                                                                │
+│  The Drake is perfect for those emphasizing service quality, historic ambiance, and a sophisticated urban        │
+│  setting. Room quality is generally good, but may vary; VIP guests should be placed in refurbished or premium    │
+│  rooms if possible. Suitable for conferences that want impact and location prestige.                             │
+│                                                                                                                  │
+│  ---                                                                                                             │
+│                                                                                                                  │
+│  ### 3. The Geraghty                                                                                             │
+│                                                                                                                  │
+│  **Strengths:**                                                                                                  │
+│  - **Space & Capacity:** Unique with 25,000 sq. ft. open, highly customizable space; accommodates up to 1,000    │
+│  for receptions, 600 seated. Best suited to clients who need design flexibility and bespoke layouts.             │
+│  - **Amenities:** Luxury finishes, state-of-the-art A/V, green room, secure on-site parking, WiFi, in-house      │
+│  catering. Reviewers specifically highlight innovation, endless layout options, and modern infrastructure        │
+│  (PartySlate, Yelp, Rallyvite).                                                                                  │
+│  - **Service:** Event staff and coordination receive high praise—4.7-star user rating based on 386 reviews. The  │
+│  team is noted for responsiveness and professional handling of large galas and custom events.                    │
+│  - **Cleanliness & Logistics:** Guests commend parking capacity, clean restrooms, and organized space flow,      │
+│  making logistics easier for large groups.                                                                       │
+│                                                                                                                  │
+│  **Issues:**                                                                                                     │
+│  - **Pricing:** Significantly higher than traditional hotels with venue rental from $20,000–$45,000 and          │
+│  per-guest costs $400–$450. Targeted at premium/bespoke event budgets.                                           │
+│  - **Availability:** Peak seasons (spring/fall) can book 9+ months ahead; less flexible than hotels due to       │
+│  focus on major events.                                                                                          │
+│                                                                                                                  │
+│  **Suitability:**                                                                                                │
+│  Ideal for conferences seeking wow-factor, flexible theming, and a modern, high-end environment. Excellent for   │
+│  launches, creative gatherings, and clients who want a blank-slate customized design. Not suitable for           │
+│  overnight lodging; partner hotels will be needed for accommodations.                                            │
+│                                                                                                                  │
+│  ---                                                                                                             │
+│                                                                                                                  │
+│  ### 4. The Gwen, a Luxury Collection Hotel                                                                      │
+│                                                                                                                  │
+│  **Strengths:**                                                                                                  │
+│  - **Space & Capacity:** Intimate but versatile, with 3,388 sq. ft. ballroom (up to 400), rooftop terrace, and   │
+│  modern event spaces. Indoor and outdoor flexibility is a plus for creative or premium small to mid-sized        │
+│  conferences.                                                                                                    │
+│  - **Location:** Right on the Magnificent Mile, with sweeping city views and proximity to business,              │
+│  attractions, and transportation.                                                                                │
+│  - **Amenities:** Modern A/V, luxury guest rooms, excellent catering (highly praised in reviews), rooftop event  │
+│  spaces with cityscape views, and a 24-hour business center.                                                     │
+│  - **Service:** WeddingWire and The Knot report 5-star event service, delicious food, and strong guest           │
+│  experience. Event manager support is specifically mentioned as excellent.                                       │
+│                                                                                                                  │
+│  **Issues:**                                                                                                     │
+│  - **Event Communication:** A TripAdvisor reviewer reported serious communication breakdowns for an event; some  │
+│  guests feel the service can fall short of its 5-star claims (Marriott reviews). For high-stakes events,         │
+│  require clear contractual terms and strong event liaison.                                                       │
+│  - **Space Limitations:** Not suitable for large conferences—best as a boutique executive event or premium       │
+│  breakout venue. Ballrooms/terrace cannot manage events over 400 at once.                                        │
+│                                                                                                                  │
+│  **Suitability:**                                                                                                │
+│  Excellent for smaller or exclusive conferences, corporate retreats, or VIP summits. The rooftop is a            │
+│  highlight, but indoor space is limited; not a match for groups exceeding 400. Verify event management           │
+│  processes for critical events.                                                                                  │
+│                                                                                                                  │
+│  ---                                                                                                             │
+│                                                                                                                  │
+│  ### 5. Taste 222                                                                                                │
+│                                                                                                                  │
+│  **Strengths:**                                                                                                  │
+│  - **Space & Capacity:** Modern, chic, and intimate—seats up to 100, or 250 standing with buyout. Ideal for      │
+│  small conferences, executive dinners, or networking receptions.                                                 │
+│  - **Amenities:** Standout AV capabilities (260” 4k TV, LED screen), robust cocktail and catering menu, WiFi,    │
+│  flexible floor plans, and engaging private event staff.                                                         │
+│  - **Ambience & Dining:** Consistently praised for “impeccable service,” “amazing food,” “sexy classy            │
+│  ambiance,” and an “intimate yet lively” feel (Opentable, Yelp, TripAdvisor). Management is noted for            │
+│  customizing events to client taste.                                                                             │
+│  - **Location:** West Loop locale offers convenience and a trendy, modern backdrop. Custom event menus and       │
+│  packages available for unique experiences.                                                                      │
+│                                                                                                                  │
+│  **Issues:**                                                                                                     │
+│  - **Capacity Limit:** Not suitable for mid-to-large conferences. Groups over 100 (seated) will need             │
+│  alternative venues.                                                                                             │
+│  - **Event Type:** Better for receptions, dining-centered meetings, or networking—less ideal for traditional     │
+│  conference programs that require multiple breakout rooms.                                                       │
+│                                                                                                                  │
+│  **Suitability:**                                                                                                │
+│  A top choice for executive board meetings, small-scale summits, or celebratory gatherings. Perfect dining and   │
+│  service, tech-forward, and flexible. Not appropriate for conferences requiring breakout sessions or high        │
+│  attendee capacity.                                                                                              │
+│                                                                                                                  │
+│  ---                                                                                                             │
+│                                                                                                                  │
+│  **Summary Table:**                                                                                              │
+│                                                                                                                  │
+│  | Venue            | Max Capacity | Location         | Key Strengths                | Key Issues                │
+│  | Suitable For                |                                                                                 │
+│  |------------------|-------------|------------------|------------------------------|--------------------------  │
+│  |-----------------------------|                                                                                 │
+│  | Palmer House     | 1,690+      | Downtown Loop    | Large, historic, full-service| Room updates, cost         │
+│  | Large conferences           |                                                                                 │
+│  | The Drake        | 1,000       | Magnificent Mile | Service, décor, grand spaces | Room age, availability     │
+│  | Large, prestigious meetings |                                                                                 │
+│  | The Geraghty     | 1,000 (rec) | Near South Side  | Flexibility, custom events   | Cost, peak booking         │
+│  | Creative, large events      |                                                                                 │
+│  | The Gwen         | 400         | Magnificent Mile | Modern luxury, rooftop views | Small space, comms         │
+│  | Boutique/exec events        |                                                                                 │
+│  | Taste 222        | 100 (sit)   | West Loop        | Food, ambiance, AV tech      | Size, format limitation    │
+│  | Small, dining-focused       |                                                                                 │
+│                                                                                                                  │
+│  ---                                                                                                             │
+│                                                                                                                  │
+│  **Conclusion:**                                                                                                 │
+│  Each venue is of high overall quality but is best matched to specific event types and scales. Palmer House and  │
+│  The Drake are reliable for large, traditional conferences with established reputations, though attention        │
+│  should be paid to room selection and advance booking. The Geraghty offers the most flexibility and modern       │
+│  amenities for creative or highly customized event designs, with a higher price tag. The Gwen excels at premium  │
+│  boutique events, but communication must be proactive; Taste 222 is a standout modern option for small,          │
+│  high-service gatherings. All venues are highly rated, but the final choice should be made based on attendee     │
+│  numbers, event format, and the client's priorities for atmosphere, customization, and service style.            │
+│                                                                                                                  │
+│  All venues should be contacted for final pricing and recent availability due to dynamic demand and periodic     │
+│  renovations/upgrades.                                                                                           │
+│                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+2025-09-08 16:23:11,864 - 22568 - rag_storage.py-rag_storage:94 - ERROR: Error during short_term save: APIStatusError.__init__() missing 2 required keyword-only arguments: 'response' and 'body'
+Failed to add to long term memory: Failed to convert text into a Pydantic model due to error: litellm.APIError:
+AzureException APIError - argument of type 'NoneType' is not iterable
+🚀 Crew: crew
+├── 📋 Task: c52a70de-2f13-4d57-8f17-caf9e50eeb4f
+│   Assigned to: Conference Venue Finder
+│   Status: ✅ Completed
+│   ├── 🔧 Used Search the internet with Serper (1)
+│   ├── 🔧 Used Search the internet with Serper (2)
+│   ├── 🔧 Used Search the internet with Serper (3)
+│   ├── 🔧 Used Search the internet with Serper (4)
+│   ├── 🔧 Used Search the internet with Serper (5)
+│   ├── 🔧 Used Search the internet with Serper (6)
+│   ├── 🔧 Used Search the internet with Serper (7)
+│   ├── 🔧 Used Search the internet with Serper (8)
+│   ├── 🧠 Memory Update Overall
+│   │   └── ✅ Short Term Memory Memory Saved (100.08ms)
+│   └── ✅ Memory Retrieval Completed
+│       └── Sources Used
+│           ├── ✅ Long Term Memory (1.73ms)
+│           ├── ✅ Short Term Memory (310.61ms)
+│           └── ✅ Entity Memory (137.82ms)
+├── ✅ Memory Retrieval Completed
+│   └── Sources Used
+│       ├── ✅ Long Term Memory (6.26ms)
+│       ├── ✅ Short Term Memory (133.57ms)
+│       └── ✅ Entity Memory (100.86ms)
+└── 📋 Task: 2cd88f8c-f715-4342-8b6b-0e0300482f69
+    Assigned to: Venue Quality Assurance Specialist
+    Status: ✅ Completed
+    ├── 🔧 Used Search the internet with Serper (9)
+    ├── 🔧 Used Search the internet with Serper (10)
+    ├── 🔧 Used Search the internet with Serper (11)
+    ├── 🔧 Used Search the internet with Serper (12)
+    ├── 🔧 Used Search the internet with Serper (13)
+    └── 🧠 Memory Update Overall
+        └── ✅ Short Term Memory Memory Saved (126.19ms)
+╭──────────────────────────────────────────────── Task Completion ─────────────────────────────────────────────────╮
+│                                                                                                                  │
+│  Task Completed                                                                                                  │
+│  Name: 2cd88f8c-f715-4342-8b6b-0e0300482f69                                                                      │
+│  Agent: Venue Quality Assurance Specialist                                                                       │
+│  Tool Args:                                                                                                      │
+│                                                                                                                  │
+│                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+╭──────────────────────────────────────────────── Crew Completion ─────────────────────────────────────────────────╮
+│                                                                                                                  │
+│  Crew Execution Completed                                                                                        │
+│  Name: crew                                                                                                      │
+│  ID: 09966e3f-ae0b-4f39-a950-2e9f869ed03e                                                                        │
+│  Tool Args:                                                                                                      │
+│  Final Output: **Venue Quality Assurance Report: Chicago Conference Venues**                                     │
+│                                                                                                                  │
+│  ---                                                                                                             │
+│                                                                                                                  │
+│  ### 1. Palmer House, a Hilton Hotel                                                                             │
+│                                                                                                                  │
+│  **Strengths:**                                                                                                  │
+│  - **Space & Capacity:** Extremely versatile with over 130,000 sq. ft. of event space, numerous breakout rooms,  │
+│  and three large ballrooms (Grand Ballroom: up to 1,690 guests). This meets and exceeds requirements for large   │
+│  conferences and exhibitions.                                                                                    │
+│  - **Location:** Centrally positioned downtown, walking distance to Millennium Park and major city attractions.  │
+│  - **Amenities:** Historic ambiance, on-site dining (Lockwood Restaurant & Bar), comprehensive A/V support,      │
+│  WiFi, on-site catering, VIP suites, guest room blocks, and a dedicated events team.                             │
+│  - **Service:** Repeatedly praised in multiple reviews (TripAdvisor, Yelp, Expedia) for excellent service at     │
+│  events and conferences. Staff described as “awesome,” and the support for large meetings is consistently        │
+│  strong.                                                                                                         │
+│  - **References:** Hilton advertises a specialized events team and adaptable event infrastructure, which is      │
+│  supported by user experiences.                                                                                  │
+│                                                                                                                  │
+│  **Issues:**                                                                                                     │
+│  - **Accommodation Quality:** Some guests note that the rooms, while comfortable and clean, can be average in    │
+│  size and could benefit from updates. Negative experiences (Reddit, Yelp) cite “dilapidated rooms” and           │
+│  occasional poor service—a potential concern during full occupancy.                                              │
+│  - **Pricing:** High-end, with room rates $350+/night and event space $2,500–$15,000+ per day. Could be          │
+│  prohibitive for budget-conscious events.                                                                        │
+│                                                                                                                  │
+│  **Suitability:**                                                                                                │
+│  Palmer House is an outstanding venue for large, prestige events seeking a downtown location, with extensive     │
+│  space and strong banquet/meeting support. The classic setting suits high-profile occasions. However, attention  │
+│  should be paid to ensuring guest room quality, especially for VIP/high-expectation clientele. Booking well in   │
+│  advance is recommended due to demand.                                                                           │
+│                                                                                                                  │
+│  ---                                                                                                             │
+│                                                                                                                  │
+│  ### 2. The Drake Hotel                                                                                          │
+│                                                                                                                  │
+│  **Strengths:**                                                                                                  │
+│  - **Space & Capacity:** Offers over 33,000 sq. ft. of elegant event space, large ballrooms for up to 1,000      │
+│  guests—ideal for mid-to-large conferences.                                                                      │
+│  - **Location:** Prime Magnificent Mile address next to Lake Michigan, enhancing guest impression and access.    │
+│  - **Amenities:** Historic décor, lake views, 21 event rooms, full A/V, on-site catering, and dedicated event    │
+│  planning staff. Highly customizable spaces.                                                                     │
+│  - **Service:** Universally praised for attentive, friendly, and accommodating staff (WeddingWire, TripAdvisor,  │
+│  The Knot). Events described as “first class,” with seamless service in all event phases. Food and beverage      │
+│  quality is routinely ranked highly.                                                                             │
+│  - **Atmosphere:** Gold Coast Room is particularly noted for its views and grandeur; the hotel’s iconic Chicago  │
+│  presence adds prestige to events.                                                                               │
+│                                                                                                                  │
+│  **Issues:**                                                                                                     │
+│  - **Room Experience:** While most reviews are positive, a minority of guests cite dated rooms and plumbing      │
+│  issues (Reddit), which could impact guest satisfaction if not managed.                                          │
+│  - **Availability:** Bookings are highly sought after during convention seasons; reservations should be made     │
+│  6–12 months in advance.                                                                                         │
+│                                                                                                                  │
+│  **Suitability:**                                                                                                │
+│  The Drake is perfect for those emphasizing service quality, historic ambiance, and a sophisticated urban        │
+│  setting. Room quality is generally good, but may vary; VIP guests should be placed in refurbished or premium    │
+│  rooms if possible. Suitable for conferences that want impact and location prestige.                             │
+│                                                                                                                  │
+│  ---                                                                                                             │
+│                                                                                                                  │
+│  ### 3. The Geraghty                                                                                             │
+│                                                                                                                  │
+│  **Strengths:**                                                                                                  │
+│  - **Space & Capacity:** Unique with 25,000 sq. ft. open, highly customizable space; accommodates up to 1,000    │
+│  for receptions, 600 seated. Best suited to clients who need design flexibility and bespoke layouts.             │
+│  - **Amenities:** Luxury finishes, state-of-the-art A/V, green room, secure on-site parking, WiFi, in-house      │
+│  catering. Reviewers specifically highlight innovation, endless layout options, and modern infrastructure        │
+│  (PartySlate, Yelp, Rallyvite).                                                                                  │
+│  - **Service:** Event staff and coordination receive high praise—4.7-star user rating based on 386 reviews. The  │
+│  team is noted for responsiveness and professional handling of large galas and custom events.                    │
+│  - **Cleanliness & Logistics:** Guests commend parking capacity, clean restrooms, and organized space flow,      │
+│  making logistics easier for large groups.                                                                       │
+│                                                                                                                  │
+│  **Issues:**                                                                                                     │
+│  - **Pricing:** Significantly higher than traditional hotels with venue rental from $20,000–$45,000 and          │
+│  per-guest costs $400–$450. Targeted at premium/bespoke event budgets.                                           │
+│  - **Availability:** Peak seasons (spring/fall) can book 9+ months ahead; less flexible than hotels due to       │
+│  focus on major events.                                                                                          │
+│                                                                                                                  │
+│  **Suitability:**                                                                                                │
+│  Ideal for conferences seeking wow-factor, flexible theming, and a modern, high-end environment. Excellent for   │
+│  launches, creative gatherings, and clients who want a blank-slate customized design. Not suitable for           │
+│  overnight lodging; partner hotels will be needed for accommodations.                                            │
+│                                                                                                                  │
+│  ---                                                                                                             │
+│                                                                                                                  │
+│  ### 4. The Gwen, a Luxury Collection Hotel                                                                      │
+│                                                                                                                  │
+│  **Strengths:**                                                                                                  │
+│  - **Space & Capacity:** Intimate but versatile, with 3,388 sq. ft. ballroom (up to 400), rooftop terrace, and   │
+│  modern event spaces. Indoor and outdoor flexibility is a plus for creative or premium small to mid-sized        │
+│  conferences.                                                                                                    │
+│  - **Location:** Right on the Magnificent Mile, with sweeping city views and proximity to business,              │
+│  attractions, and transportation.                                                                                │
+│  - **Amenities:** Modern A/V, luxury guest rooms, excellent catering (highly praised in reviews), rooftop event  │
+│  spaces with cityscape views, and a 24-hour business center.                                                     │
+│  - **Service:** WeddingWire and The Knot report 5-star event service, delicious food, and strong guest           │
+│  experience. Event manager support is specifically mentioned as excellent.                                       │
+│                                                                                                                  │
+│  **Issues:**                                                                                                     │
+│  - **Event Communication:** A TripAdvisor reviewer reported serious communication breakdowns for an event; some  │
+│  guests feel the service can fall short of its 5-star claims (Marriott reviews). For high-stakes events,         │
+│  require clear contractual terms and strong event liaison.                                                       │
+│  - **Space Limitations:** Not suitable for large conferences—best as a boutique executive event or premium       │
+│  breakout venue. Ballrooms/terrace cannot manage events over 400 at once.                                        │
+│                                                                                                                  │
+│  **Suitability:**                                                                                                │
+│  Excellent for smaller or exclusive conferences, corporate retreats, or VIP summits. The rooftop is a            │
+│  highlight, but indoor space is limited; not a match for groups exceeding 400. Verify event management           │
+│  processes for critical events.                                                                                  │
+│                                                                                                                  │
+│  ---                                                                                                             │
+│                                                                                                                  │
+│  ### 5. Taste 222                                                                                                │
+│                                                                                                                  │
+│  **Strengths:**                                                                                                  │
+│  - **Space & Capacity:** Modern, chic, and intimate—seats up to 100, or 250 standing with buyout. Ideal for      │
+│  small conferences, executive dinners, or networking receptions.                                                 │
+│  - **Amenities:** Standout AV capabilities (260” 4k TV, LED screen), robust cocktail and catering menu, WiFi,    │
+│  flexible floor plans, and engaging private event staff.                                                         │
+│  - **Ambience & Dining:** Consistently praised for “impeccable service,” “amazing food,” “sexy classy            │
+│  ambiance,” and an “intimate yet lively” feel (Opentable, Yelp, TripAdvisor). Management is noted for            │
+│  customizing events to client taste.                                                                             │
+│  - **Location:** West Loop locale offers convenience and a trendy, modern backdrop. Custom event menus and       │
+│  packages available for unique experiences.                                                                      │
+│                                                                                                                  │
+│  **Issues:**                                                                                                     │
+│  - **Capacity Limit:** Not suitable for mid-to-large conferences. Groups over 100 (seated) will need             │
+│  alternative venues.                                                                                             │
+│  - **Event Type:** Better for receptions, dining-centered meetings, or networking—less ideal for traditional     │
+│  conference programs that require multiple breakout rooms.                                                       │
+│                                                                                                                  │
+│  **Suitability:**                                                                                                │
+│  A top choice for executive board meetings, small-scale summits, or celebratory gatherings. Perfect dining and   │
+│  service, tech-forward, and flexible. Not appropriate for conferences requiring breakout sessions or high        │
+│  attendee capacity.                                                                                              │
+│                                                                                                                  │
+│  ---                                                                                                             │
+│                                                                                                                  │
+│  **Summary Table:**                                                                                              │
+│                                                                                                                  │
+│  | Venue            | Max Capacity | Location         | Key Strengths                | Key Issues                │
+│  | Suitable For                |                                                                                 │
+│  |------------------|-------------|------------------|------------------------------|--------------------------  │
+│  |-----------------------------|                                                                                 │
+│  | Palmer House     | 1,690+      | Downtown Loop    | Large, historic, full-service| Room updates, cost         │
+│  | Large conferences           |                                                                                 │
+│  | The Drake        | 1,000       | Magnificent Mile | Service, décor, grand spaces | Room age, availability     │
+│  | Large, prestigious meetings |                                                                                 │
+│  | The Geraghty     | 1,000 (rec) | Near South Side  | Flexibility, custom events   | Cost, peak booking         │
+│  | Creative, large events      |                                                                                 │
+│  | The Gwen         | 400         | Magnificent Mile | Modern luxury, rooftop views | Small space, comms         │
+│  | Boutique/exec events        |                                                                                 │
+│  | Taste 222        | 100 (sit)   | West Loop        | Food, ambiance, AV tech      | Size, format limitation    │
+│  | Small, dining-focused       |                                                                                 │
+│                                                                                                                  │
+│  ---                                                                                                             │
+│                                                                                                                  │
+│  **Conclusion:**                                                                                                 │
+│  Each venue is of high overall quality but is best matched to specific event types and scales. Palmer House and  │
+│  The Drake are reliable for large, traditional conferences with established reputations, though attention        │
+│  should be paid to room selection and advance booking. The Geraghty offers the most flexibility and modern       │
+│  amenities for creative or highly customized event designs, with a higher price tag. The Gwen excels at premium  │
+│  boutique events, but communication must be proactive; Taste 222 is a standout modern option for small,          │
+│  high-service gatherings. All venues are highly rated, but the final choice should be made based on attendee     │
+│  numbers, event format, and the client's priorities for atmosphere, customization, and service style.            │
+│                                                                                                                  │
+│  All venues should be contacted for final pricing and recent availability due to dynamic demand and periodic     │
+│  renovations/upgrades.                                                                                           │
+│                                                                                                                  │
+│                                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+Crew kickoff result:
+ **Venue Quality Assurance Report: Chicago Conference Venues**
+
+---
+
+### 1. Palmer House, a Hilton Hotel
+
+**Strengths:**
+- **Space & Capacity:** Extremely versatile with over 130,000 sq. ft. of event space, numerous breakout rooms, and three large ballrooms (Grand Ballroom: up to 1,690 guests). This meets and exceeds requirements for large conferences and exhibitions.
+- **Location:** Centrally positioned downtown, walking distance to Millennium Park and major city attractions.
+- **Amenities:** Historic ambiance, on-site dining (Lockwood Restaurant & Bar), comprehensive A/V support, WiFi, on-site catering, VIP suites, guest room blocks, and a dedicated events team.
+- **Service:** Repeatedly praised in multiple reviews (TripAdvisor, Yelp, Expedia) for excellent service at events and conferences. Staff described as “awesome,” and the support for large meetings is consistently strong.
+- **References:** Hilton advertises a specialized events team and adaptable event infrastructure, which is supported by user experiences.
+
+**Issues:**
+- **Accommodation Quality:** Some guests note that the rooms, while comfortable and clean, can be average in size and could benefit from updates. Negative experiences (Reddit, Yelp) cite “dilapidated rooms” and occasional poor service—a potential concern during full occupancy.
+- **Pricing:** High-end, with room rates $350+/night and event space $2,500–$15,000+ per day. Could be prohibitive for budget-conscious events.
+
+**Suitability:**
+Palmer House is an outstanding venue for large, prestige events seeking a downtown location, with extensive space and strong banquet/meeting support. The classic setting suits high-profile occasions. However, attention should be paid to ensuring guest room quality, especially for VIP/high-expectation clientele. Booking well in advance is recommended due to demand.
+
+---
+
+### 2. The Drake Hotel
+
+**Strengths:**
+- **Space & Capacity:** Offers over 33,000 sq. ft. of elegant event space, large ballrooms for up to 1,000 guests—ideal for mid-to-large conferences.
+- **Location:** Prime Magnificent Mile address next to Lake Michigan, enhancing guest impression and access.
+- **Amenities:** Historic décor, lake views, 21 event rooms, full A/V, on-site catering, and dedicated event planning staff. Highly customizable spaces.
+- **Service:** Universally praised for attentive, friendly, and accommodating staff (WeddingWire, TripAdvisor, The Knot). Events described as “first class,” with seamless service in all event phases. Food and beverage quality is routinely ranked highly.
+- **Atmosphere:** Gold Coast Room is particularly noted for its views and grandeur; the hotel’s iconic Chicago presence adds prestige to events.
+
+**Issues:**
+- **Room Experience:** While most reviews are positive, a minority of guests cite dated rooms and plumbing issues (Reddit), which could impact guest satisfaction if not managed.
+- **Availability:** Bookings are highly sought after during convention seasons; reservations should be made 6–12 months in advance.
+
+**Suitability:**
+The Drake is perfect for those emphasizing service quality, historic ambiance, and a sophisticated urban setting. Room quality is generally good, but may vary; VIP guests should be placed in refurbished or premium rooms if possible. Suitable for conferences that want impact and location prestige.
+
+---
+
+### 3. The Geraghty
+
+**Strengths:**
+- **Space & Capacity:** Unique with 25,000 sq. ft. open, highly customizable space; accommodates up to 1,000 for receptions, 600 seated. Best suited to clients who need design flexibility and bespoke layouts.
+- **Amenities:** Luxury finishes, state-of-the-art A/V, green room, secure on-site parking, WiFi, in-house catering. Reviewers specifically highlight innovation, endless layout options, and modern infrastructure (PartySlate, Yelp, Rallyvite).
+- **Service:** Event staff and coordination receive high praise—4.7-star user rating based on 386 reviews. The team is noted for responsiveness and professional handling of large galas and custom events.
+- **Cleanliness & Logistics:** Guests commend parking capacity, clean restrooms, and organized space flow, making logistics easier for large groups.
+
+**Issues:**
+- **Pricing:** Significantly higher than traditional hotels with venue rental from $20,000–$45,000 and per-guest costs $400–$450. Targeted at premium/bespoke event budgets.
+- **Availability:** Peak seasons (spring/fall) can book 9+ months ahead; less flexible than hotels due to focus on major events.
+
+**Suitability:**
+Ideal for conferences seeking wow-factor, flexible theming, and a modern, high-end environment. Excellent for launches, creative gatherings, and clients who want a blank-slate customized design. Not suitable for overnight lodging; partner hotels will be needed for accommodations.
+
+---
+
+### 4. The Gwen, a Luxury Collection Hotel
+
+**Strengths:**
+- **Space & Capacity:** Intimate but versatile, with 3,388 sq. ft. ballroom (up to 400), rooftop terrace, and modern event spaces. Indoor and outdoor flexibility is a plus for creative or premium small to mid-sized conferences.
+- **Location:** Right on the Magnificent Mile, with sweeping city views and proximity to business, attractions, and transportation.
+- **Amenities:** Modern A/V, luxury guest rooms, excellent catering (highly praised in reviews), rooftop event spaces with cityscape views, and a 24-hour business center.
+- **Service:** WeddingWire and The Knot report 5-star event service, delicious food, and strong guest experience. Event manager support is specifically mentioned as excellent.
+
+**Issues:**
+- **Event Communication:** A TripAdvisor reviewer reported serious communication breakdowns for an event; some guests feel the service can fall short of its 5-star claims (Marriott reviews). For high-stakes events, require clear contractual terms and strong event liaison.
+- **Space Limitations:** Not suitable for large conferences—best as a boutique executive event or premium breakout venue. Ballrooms/terrace cannot manage events over 400 at once.
+
+**Suitability:**
+Excellent for smaller or exclusive conferences, corporate retreats, or VIP summits. The rooftop is a highlight, but indoor space is limited; not a match for groups exceeding 400. Verify event management processes for critical events.
+
+---
+
+### 5. Taste 222
+
+**Strengths:**
+- **Space & Capacity:** Modern, chic, and intimate—seats up to 100, or 250 standing with buyout. Ideal for small conferences, executive dinners, or networking receptions.
+- **Amenities:** Standout AV capabilities (260” 4k TV, LED screen), robust cocktail and catering menu, WiFi, flexible floor plans, and engaging private event staff.
+- **Ambience & Dining:** Consistently praised for “impeccable service,” “amazing food,” “sexy classy ambiance,” and an “intimate yet lively” feel (Opentable, Yelp, TripAdvisor). Management is noted for customizing events to client taste.
+- **Location:** West Loop locale offers convenience and a trendy, modern backdrop. Custom event menus and packages available for unique experiences.
+
+**Issues:**
+- **Capacity Limit:** Not suitable for mid-to-large conferences. Groups over 100 (seated) will need alternative venues.
+- **Event Type:** Better for receptions, dining-centered meetings, or networking—less ideal for traditional conference programs that require multiple breakout rooms.
+
+**Suitability:**
+A top choice for executive board meetings, small-scale summits, or celebratory gatherings. Perfect dining and service, tech-forward, and flexible. Not appropriate for conferences requiring breakout sessions or high attendee capacity.
+
+---
+
+**Summary Table:**
+
+| Venue            | Max Capacity | Location         | Key Strengths                | Key Issues               | Suitable For                |
+|------------------|-------------|------------------|------------------------------|--------------------------|-----------------------------|
+| Palmer House     | 1,690+      | Downtown Loop    | Large, historic, full-service| Room updates, cost       | Large conferences           |
+| The Drake        | 1,000       | Magnificent Mile | Service, décor, grand spaces | Room age, availability   | Large, prestigious meetings |
+| The Geraghty     | 1,000 (rec) | Near South Side  | Flexibility, custom events   | Cost, peak booking       | Creative, large events      |
+| The Gwen         | 400         | Magnificent Mile | Modern luxury, rooftop views | Small space, comms       | Boutique/exec events        |
+| Taste 222        | 100 (sit)   | West Loop        | Food, ambiance, AV tech      | Size, format limitation  | Small, dining-focused       |
+
+---
+
+**Conclusion:**
+Each venue is of high overall quality but is best matched to specific event types and scales. Palmer House and The Drake are reliable for large, traditional conferences with established reputations, though attention should be paid to room selection and advance booking. The Geraghty offers the most flexibility and modern amenities for creative or highly customized event designs, with a higher price tag. The Gwen excels at premium boutique events, but communication must be proactive; Taste 222 is a standout modern option for small, high-service gatherings. All venues are highly rated, but the final choice should be made based on attendee numbers, event format, and the client's priorities for atmosphere, customization, and service style.
+
+All venues should be contacted for final pricing and recent availability due to dynamic demand and periodic renovations/upgrades.
+CrewAI agents run completed.
+(.venv) ammondal@AMMONDAL-LAPTOP[Sep-08 04:23:13][multi-agent-example][main]$
