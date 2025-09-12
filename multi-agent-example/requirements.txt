@@ -3,5 +3,7 @@ langchain
 langchain-openai
 langchain-community
 crewai
-crewai_tools
+crewai_tools==0.69.0
 litellm
+langchain_google_genai
+protobuf==5.29.0

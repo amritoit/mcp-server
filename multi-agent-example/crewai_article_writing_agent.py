@@ -11,14 +11,16 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 warnings.filterwarnings('ignore')
 os.environ['PIP_ROOT_USER_ACTION'] = 'ignore'
 
-my_azure_api_key = "<<YOUR_AZURE_API_KEY_HERE>>"
-os.environ["SERPER_API_KEY"] = '<<YOUR_SERPER_API_KEY_HERE,get from https://serper.dev/>>'
+GEMINI_API_KEY = "<<>>"
+os.environ["SERPER_API_KEY"] = '<<>>'
+my_azure_api_key = "<<>>"
+AZURE_API_KEY = my_azure_api_key
+AZURE_API_BASE = "https://ammondal-llm-test.openai.azure.com/"
+AZURE_API_VERSION = "2025-04-01-preview"
 
-# Required
-AZURE_API_KEY=my_azure_api_key
-AZURE_API_BASE= "https://ammondal-llm-test.openai.azure.com/"
-AZURE_API_VERSION="2025-04-01-preview"
-GOOGLE_API_KEY = "<<YOUR_GOOGLE_API_KEY_HERE>>"
+os.environ["GOOGLE_API_KEY"] = GEMINI_API_KEY
+os.environ["OPENAI_API_KEY"] = my_azure_api_key
+
 
 class MyCrewAgent:
 
@@ -43,10 +45,12 @@ class MyCrewAgent:
         print(f"Initializing gemini llm agent...") 
 
         # Initialize the Gemini model using ChatGoogleGenerativeAI
-        self.gemini_llm=ChatGoogleGenerativeAI(model="gemini-1.5-flash",
-                                verbose=True,
-                                temperature=0.5,
-                                google_api_key=os.getenv("GOOGLE_API_KEY"))
+        self.gemini_llm = LLM(
+            model="gemini/gemini-2.0-flash",
+            temperature=0.7,
+            verbose=True,
+            api_key=GEMINI_API_KEY
+        )
         
         # Data Researcher Agent using Gemini and SerperSearch
         self.article_researcher=Agent(
@@ -118,7 +122,7 @@ class MyCrewAgent:
     def run_event_planning_crew(self):
         print(f"Running CrewAI agents...")
         inputs = {
-            'topic': 'The rise in global tempratures from 2018 onwards'
+            'topic': 'How to make yellowstone roadtrip interesting with family and toddler ?'
         }
 
         try:
